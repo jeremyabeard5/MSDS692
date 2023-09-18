@@ -13,10 +13,12 @@ import pandas as pd
 import numpy as np
 import nltk
 from nltk.corpus import stopwords
+from nltk.sentiment import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt
 from collections import defaultdict
 #from collections import Counter
 #import re
+nltk.download('vader_lexicon')
 
 # Next steps, define paths, directories
 data_dir = "data"
@@ -28,6 +30,9 @@ files = os.listdir(file_path)
 
 # Create empty speech list
 speeches = []#[{'prez': [], 'year': [], 'text': []}]
+
+# Set figure dpi
+dpi = 300
 
 # Create test dataframe for use later
 testdata = [
@@ -51,6 +56,19 @@ def count_words(tex):
     else:
         words = tex.lower().split()
         return len(words)
+    
+# Create a function that finds the amount of speeches per president
+def speeches_per_president(tex):
+    return df_speeches['prez'].value_counts()[tex]
+
+def sentiment_analysis(tex):
+    this_speechs_sentiments = []
+    for word in tex:
+        if word in sentiment_dict.keys():
+            this_speechs_sentiments.append(sentiment_dict[word])
+        else:
+            this_speechs_sentiments.append(0)
+    return (sum(this_speechs_sentiments) / len(this_speechs_sentiments))
 
 # Main function
 if __name__ == "__main__":
@@ -91,7 +109,7 @@ if __name__ == "__main__":
     # It's a dictionary comprehension that takes the sorted list of speeches
     # and consolidates them by president.
     # so 'president_text['Washington']' will have all of Washington's speeches
-    print(f'TIME: {timeit.default_timer() - start_time}')
+    print(f'Sorting presidents, TIME: {timeit.default_timer() - start_time}')
     president_text = defaultdict(str)
     for speech in sorted_list:
         president_text[speech['prez']] += speech['text']
@@ -143,10 +161,15 @@ if __name__ == "__main__":
     #5     JohnQuincyAdams  Fellow Citizens of the Senate and of the House...
     #6       AndrewJackson  Fellow Citizens of the Senate and of the House...
     #7      MartinVanBuren  Fellow-Citizens of the Senate and House of Rep...
+    
+    # After creating the df_president_speeches dataframe, I want to add in the number of speeches per president
+    df_president_speeches['num_spchs'] = df_president_speeches['prez'].apply(speeches_per_president)
 
     
+    #print(f'Done, TIME: {timeit.default_timer() - start_time}')
     
-    print(f'Done, TIME: {timeit.default_timer() - start_time}')
+    
+    
         
     # now we're done reading in the speedches
     # I want to answer the following questions:
@@ -161,14 +184,14 @@ if __name__ == "__main__":
     # Let's CLEAN
     fd = nltk.FreqDist(' '.join(df_speeches['text']).split())
     print("")
-    print("Uncleaned Common Words")
+    print(f"Uncleaned Common Words, TIME: {timeit.default_timer() - start_time}")
     print(fd.most_common(30))
     stops = stopwords.words('english')
     words = ' '.join(df_speeches['text']).lower().split()
     cleaned_words = [w for w in words if w not in set(stops)]
     cleaned_fd = nltk.FreqDist(cleaned_words)
     print()
-    print("Cleaned Common Words")
+    print(f"Cleaned Common Words, TIME: {timeit.default_timer() - start_time}")
     print(cleaned_fd.most_common(30))
 
 
@@ -180,7 +203,7 @@ if __name__ == "__main__":
     x_labels = ['0', '4', '8', '12', '16', '20']
     plt.xticks(ticks=x_ticks, labels=x_labels)
     #plt.show()
-    plt.savefig('speeches_per_president_total.png')
+    plt.savefig('output/speeches_per_president_total.png')
     
     
     # That was a bit interesting to perform the overall frequency analysis of all presidents' speeches
@@ -217,25 +240,78 @@ if __name__ == "__main__":
     print('Done with test dataframe\n')
     
     # Now let's do the same with the real dataframes!
+    print()
+    print(f'Creating word_count and cleaned_word_count columns in df_speeches and df_president_speeches, TIME: {timeit.default_timer() - start_time}')
     df_speeches['word_count'] = df_speeches['text'].apply(count_words)
     df_speeches['cleaned_word_count'] = df_speeches['cleaned_text'].apply(count_words)
     df_president_speeches['word_count'] = df_president_speeches['text'].apply(count_words)
     df_president_speeches['cleaned_word_count'] = df_president_speeches['cleaned_text'].apply(count_words)
+    df_president_speeches['avg_word_per_speech'] = (df_president_speeches['word_count'] / df_president_speeches['num_spchs']).astype(int)
+    df_president_speeches['avg_cleaned_word_per_speech'] = (df_president_speeches['cleaned_word_count'] / df_president_speeches['num_spchs']).astype(int)
+    df_president_speeches['word_substance'] = (df_president_speeches['avg_cleaned_word_per_speech'] / df_president_speeches['avg_word_per_speech']).astype(float)
+    
+    print(df_president_speeches.loc[:, ['prez', 'num_spchs', 'word_count', 'avg_word_per_speech', 'cleaned_word_count', 'avg_cleaned_word_per_speech', 'word_substance']])
+    
+    #df_sorted_speech_substance = df_president_speeches.sort_values(by='word_substance', ascending=False)
+    
+    # We definitely have enough information now to answer questions about word substance and word frequency among presidents
+    # It seems right now that we only need the df_president_speeches dataframe for our analysis. We'll see if that changes.
+    # I'll first answer the question of the longest speeches and shortest speeches, and most substantive and least substantive speeches
+    fig0, ax0 = plt.subplots(figsize=(6,6))
+    ax0.barh(df_president_speeches['prez'], df_president_speeches['avg_word_per_speech'], color='tab:blue')
+    ax0.set(xlabel='Avg. Words per Speech', ylabel='President', title='Avg. Words per Speech by President')
+    plt.tight_layout()
+    plot0_filename = 'output/Avg-Words-per-Speech-by-President-CHRONO.png'
+    fig0.savefig(plot0_filename, dpi=dpi)
+    
+    fig1, ax1 = plt.subplots(figsize=(6,6))
+    df_sorted_word_per_speech = df_president_speeches.sort_values(by='avg_word_per_speech', ascending=False)
+    ax1.barh(df_sorted_word_per_speech['prez'], df_sorted_word_per_speech['avg_word_per_speech'], color='tab:blue')
+    ax1.set(xlabel='Avg. Words per Speech', ylabel='President', title='Avg. Words per Speech by President')
+    plt.tight_layout()
+    plot1_filename = 'output/Avg-Words-per-Speech-by-President-SORTED.png'
+    fig1.savefig(plot1_filename, dpi=dpi)
+    
+    # We're done charting the word count per speech, now let's chart the word substance per speech
+    fig2, ax2 = plt.subplots(figsize=(6,6))
+    df_sorted_word_substance = df_president_speeches.sort_values(by='word_substance', ascending=False)
+    ax2.barh(df_sorted_word_substance['prez'], df_sorted_word_substance['word_substance'], color='tab:blue')
+    ax2.set(xlabel='Cleaned Word/Total Word Ratio', ylabel='President', title='Speech Substance by President')
+    plt.tight_layout()
+    plot2_filename = 'output/Speech-Substance-by-President-SORTED.png'
+    fig2.savefig(plot2_filename, dpi=dpi)
+    
+    fig3, ax3 = plt.subplots(figsize=(6,6))
+    ax3.barh(df_president_speeches['prez'], df_president_speeches['word_substance'], color='tab:blue')
+    ax3.set(xlabel='Cleaned Word/Total Word Ratio', ylabel='President', title='Speech Substance by President')
+    plt.tight_layout()
+    plot3_filename = 'output/Speech-Substance-by-President-CHRONO.png'
+    fig3.savefig(plot3_filename, dpi=dpi)
+    
+    print()
+    print(f'Created initial word count / word frequency figures, TIME: {timeit.default_timer() - start_time}')
+    
+    # NOW Let's start delving into sentiment analysis
+    #analyzer = SentimentIntensityAnalyzer()
+    #df_president_speeches['sentiment_score'] = df_president_speeches['cleaned_text'].apply(lambda x: analyzer.polarity_scores(x)['compound'])    
+    #df_speeches['sentiment_score'] = df_speeches['cleaned_text'].apply(lambda x: analyzer.polarity_scores(x)['compound'])
+    #print(df_president_speeches.loc[:, ['prez', 'num_spchs', 'word_count', 'avg_word_per_speech', 'cleaned_word_count', 'avg_cleaned_word_per_speech', 'word_substance', 'sentiment_score']])
+    sentiment_df = pd.read_csv('data/AFINN-en-165.txt', sep='\t', names=['word', 'score'], index_col='word')
+    sentiment_dict = sentiment_df.to_dict()['score']
+    
+    df_president_speeches['sentiment_score'] = df_president_speeches['cleaned_text'].apply(sentiment_analysis)
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    print()
+    print(df_president_speeches.loc[:, ['prez', 'num_spchs', 'word_count', 'avg_word_per_speech', 'cleaned_word_count', 'avg_cleaned_word_per_speech', 'word_substance', 'sentiment_score']])
+    df_sorted_sentiment_01 = df_president_speeches.sort_values(by='sentiment_score', ascending=False)
+    print()
+    print(f'Printing sorted sentiment scores, TIME: {timeit.default_timer() - start_time}')
+    print(df_sorted_sentiment_01.loc[:, ['prez', 'num_spchs', 'word_count', 'avg_word_per_speech', 'cleaned_word_count', 'avg_cleaned_word_per_speech', 'word_substance', 'sentiment_score']])
+    df_sorted_sentiment_02 = df_president_speeches.sort_values(by='sentiment_score', ascending=True)
+    print()
+    print(f'Printing sorted sentiment scores, TIME: {timeit.default_timer() - start_time}')
+    print(df_sorted_sentiment_02.loc[:, ['prez', 'num_spchs', 'word_count', 'avg_word_per_speech', 'cleaned_word_count', 'avg_cleaned_word_per_speech', 'word_substance', 'sentiment_score']])
     
     
     

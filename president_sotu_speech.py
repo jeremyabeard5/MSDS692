@@ -224,6 +224,8 @@ if __name__ == "__main__":
     print(f'Creating cleaned_text column in df_president_speeches, TIME: {timeit.default_timer() - start_time}')
     df_president_speeches['cleaned_text'] = df_president_speeches['text'].apply(filter_stops)
     print(df_president_speeches.head())
+    df_speeches_sorted['cleaned_text'] = df_speeches_sorted['text'].apply(filter_stops)
+    
     
     print()
     print('Testing word count function with test dataframe')
@@ -300,7 +302,7 @@ if __name__ == "__main__":
     sentiment_dict = sentiment_df.to_dict()['score']
     
     df_president_speeches['sentiment_score'] = df_president_speeches['cleaned_text'].apply(sentiment_analysis)
-    
+    df_speeches_sorted['sentiment_score'] = df_speeches_sorted['cleaned_text'].apply(sentiment_analysis)
     
     print()
     print(df_president_speeches.loc[:, ['prez', 'num_spchs', 'word_count', 'avg_word_per_speech', 'cleaned_word_count', 'avg_cleaned_word_per_speech', 'word_substance', 'sentiment_score']])
@@ -313,7 +315,26 @@ if __name__ == "__main__":
     print(f'Printing sorted sentiment scores, TIME: {timeit.default_timer() - start_time}')
     print(df_sorted_sentiment_02.loc[:, ['prez', 'num_spchs', 'word_count', 'avg_word_per_speech', 'cleaned_word_count', 'avg_cleaned_word_per_speech', 'word_substance', 'sentiment_score']])
     
+    fig4, ax4 = plt.subplots(figsize=(6,6))
+    ax4.barh(df_sorted_sentiment_02['prez'], df_sorted_sentiment_02['sentiment_score'], color='tab:blue')
+    ax4.set(xlabel='Sentiment Score by President', ylabel='President', title='Sentiment by President')
+    plt.tight_layout()
+    plot4_filename = 'output/Sentiment-by-President-Sorted.png'
+    fig4.savefig(plot4_filename, dpi=dpi)
     
+    fig5, ax5 = plt.subplots(figsize=(6,6))
+    ax5.barh(df_speeches_sorted['prez'], df_speeches_sorted['sentiment_score'], color='tab:blue')
+    ax5.set(xlabel='Sentiment Score by President', ylabel='President', title='Sentiment by President')
+    plt.tight_layout()
+    plot5_filename = 'output/Sentiment-by-President.png'
+    fig5.savefig(plot5_filename, dpi=dpi)
+    
+    fig6, ax6 = plt.subplots(figsize=(6,6))
+    ax6.barh(df_speeches_sorted['year'], df_speeches_sorted['sentiment_score'], color='tab:blue')
+    ax6.set(xlabel='Sentiment Score by Year', ylabel='President', title='Sentiment by President')
+    plt.tight_layout()
+    plot6_filename = 'output/Sentiment-by-Year.png'
+    fig6.savefig(plot6_filename, dpi=dpi)
     
     print()
     print(f'DONE, TOTAL TIME: {timeit.default_timer() - start_time} seconds')

@@ -1,5 +1,15 @@
 # president_sotu_speech.py
 
+###############################################
+# This project is meant to be a submission for the MSDS 692 initial Data Science Practicum
+# The goal of this project is to analyze the State of the Union speeches given by the presidents of the United States
+# It analyzes each speech and produces various visualizations and data output which can be used to show how each 
+# president's speech compares to each other.
+###############################################
+# Thank you,
+# Jeremy Beard
+###############################################
+
 # 0-step to any project: time it
 import timeit
 start_time = timeit.default_timer()

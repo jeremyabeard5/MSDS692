@@ -173,12 +173,9 @@ if __name__ == "__main__":
     #7      MartinVanBuren  Fellow-Citizens of the Senate and House of Rep...
     
     # After creating the df_president_speeches dataframe, I want to add in the number of speeches per president
-    df_president_speeches['num_spchs'] = df_president_speeches['prez'].apply(speeches_per_president)
-
+    df_president_speeches['num_spchs'] = df_president_speeches['prez'].apply(speeches_per_president)    
     
     #print(f'Done, TIME: {timeit.default_timer() - start_time}')
-    
-    
     
         
     # now we're done reading in the speedches
@@ -264,6 +261,13 @@ if __name__ == "__main__":
     
     print(df_president_speeches.loc[:, ['prez', 'num_spchs', 'word_count', 'avg_word_per_speech', 'cleaned_word_count', 'avg_cleaned_word_per_speech', 'word_substance']])
     
+    # find the top 15 most common words and put them in a new 'topwords' feature
+    df_president_speeches['top_words'] = df_president_speeches['cleaned_text'].apply(lambda x: nltk.FreqDist(x).most_common(15))
+    print()
+    print('Top Words by President')
+    print(df_president_speeches.loc[:, ['prez', 'top_words']])
+    
+    
     #df_sorted_speech_substance = df_president_speeches.sort_values(by='word_substance', ascending=False)
     
     # We definitely have enough information now to answer questions about word substance and word frequency among presidents
@@ -345,6 +349,34 @@ if __name__ == "__main__":
     plt.tight_layout()
     plot6_filename = 'output/Sentiment-by-Year.png'
     fig6.savefig(plot6_filename, dpi=dpi)
+    
+    # Create a bar chart of the top 15 most common words from GeorgeWashington, the first row of the dataframe
+    
+    fig7, ax7 = plt.subplots(figsize=(6,6))
+    words_freq = df_president_speeches['top_words'][0]
+    words = [word for word, freq in words_freq]
+    freqs = [freq for word, freq in words_freq]
+    
+    ax7.barh(words, freqs, color='tab:blue')
+    ax7.set(xlabel='Top Words by President Washington', ylabel='President', title='Top Words by President')
+    plt.tight_layout()
+    plot7_filename = 'output/Top-Words-by-President-01-GeorgeWashington.png'
+    fig7.savefig(plot7_filename, dpi=dpi)
+    
+    # Now create the same chart but iterate through all presidents
+    fig8, ax8 = plt.subplots(figsize=(6,6))
+    for i in range(len(df_president_speeches)):
+        print(f"Creating chart for president {i}: {df_president_speeches['prez'][i]}...")
+        words_freq = df_president_speeches['top_words'][i]
+        words = [word for word, freq in words_freq]
+        freqs = [freq for word, freq in words_freq]
+        ax8.barh(words[0:15], freqs[0:15], color='tab:blue')
+        ylab=f"Top Words by President {df_president_speeches['prez'][i]}"
+        ax8.set(xlabel='Mentions', ylabel=ylab, title=ylab)
+        plt.tight_layout()
+        plot8_filename = f"output/Top-Words-by-President-{i}-{df_president_speeches['prez'][i]}.png"
+        fig8.savefig(plot8_filename, dpi=dpi)
+    
     
     print()
     print(f'DONE, TOTAL TIME: {timeit.default_timer() - start_time} seconds')

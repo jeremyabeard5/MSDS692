@@ -1,9 +1,13 @@
 # MSDS692
-Final project 1
+Presidential Sentiment Analysis
+
 by
+
 Jeremy Beard
 
 ## Main Ideas
+
+
 
 ## Methods
 

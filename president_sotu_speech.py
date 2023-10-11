@@ -184,6 +184,26 @@ if __name__ == "__main__":
     # After creating the df_president_speeches dataframe, I want to add in the number of speeches per president
     df_president_speeches['num_spchs'] = df_president_speeches['prez'].apply(speeches_per_president)    
     
+    # I also want to add in the Year of Presidency, so we can track the sentiment throughout a president's presidency
+    # I'll do this by creating a new column in the df_president_speeches dataframe
+    df_speeches['year_of_prez'] = df_speeches.groupby('prez').cumcount() + 1
+    df_speeches_sorted['year_of_prez'] = df_speeches_sorted.groupby('prez').cumcount() + 1
+    
+    print()
+    print('DF_SPEECHES COLUMNS AND HEAD')
+    print(df_speeches.columns)
+    print(df_speeches.head())
+    
+    print()
+    print('DF_SPEECHES_SORTED COLUMNS AND HEAD')
+    print(df_speeches_sorted.columns)
+    print(df_speeches_sorted.head())
+    
+    print()
+    print('DF_PRESIDENT_SPEECHES COLUMNS AND HEAD')
+    print(df_president_speeches.columns)
+    print(df_president_speeches.head())
+    
     ################################ DONE READ IN FILES, CREATE DATAFRAME ################################
         
     # now we're done reading in the speedches
@@ -545,6 +565,29 @@ if __name__ == "__main__":
     plt.tight_layout()
     plot18_filename = 'output/Unique-Words-by-President-SORTED.png'
     fig18.savefig(plot18_filename, dpi=dpi)
+    
+    fig19, ax19 = plt.subplots(figsize=(6,6))
+    #df_speeches_sorted_sentiment = df_speeches_sorted.sort_values(by='sentiment_score', ascending=False)
+    ax19.plot(df_speeches_sorted_sentiment['year'], df_speeches_sorted_sentiment['sentiment_score'], color='tab:blue')
+    ax19.set(xlabel='Sentiment Score by Year', ylabel='Year', title='Sentiment by Year')
+    plt.tight_layout()
+    plot19_filename = 'output/Line-Sentiment-by-Year-SORTED.png'
+    fig19.savefig(plot19_filename, dpi=dpi)
+    
+    fig20, ax20 = plt.subplots(figsize=(6,6))
+    ax20.plot(df_speeches_sorted['year'], df_speeches_sorted['sentiment_score'], color='tab:blue')
+    ax20.set(xlabel='Sentiment Score by Year', ylabel='Year', title='Sentiment Score')
+    plt.tight_layout()
+    plot20_filename = 'output/Line-Sentiment-by-Year-CHRONO.png'
+    fig20.savefig(plot20_filename, dpi=dpi)
+    
+    # Now to plot the sentiment over the course of a presidency
+    fig21, ax21 = plt.subplots(figsize=(6,6))
+    df_speeches_sorted.plot.scatter(x='year_of_prez', y='sentiment_score', c='DarkBlue', ax=ax21)
+    ax21.set(xlabel='Sentiment Score by Year of Presidency', ylabel='Year of Presidency', title='Sentiment Score')
+    plt.tight_layout()
+    plot21_filename = 'output/Sentiment-by-Year-of-Presidency-CHRONO.png'
+    fig21.savefig(plot21_filename, dpi=dpi)
     
     print()
     print(f'DONE, TOTAL TIME: {timeit.default_timer() - start_time} seconds')

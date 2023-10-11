@@ -1,3 +1,5 @@
+![Presidential Wordcloud](output/example_wordcloud.png)
+
 # MSDS692
 Presidential Sentiment Analysis
 

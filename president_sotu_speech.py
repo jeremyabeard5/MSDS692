@@ -21,8 +21,11 @@ start_time = timeit.default_timer()
 # First step to any project: hello world :)
 print("Hello World!")
 
+
+
 # Next step, import the libraries we'll need
 import os
+import subprocess
 import pandas as pd
 import numpy as np
 import nltk
@@ -32,6 +35,17 @@ from nltk.stem import WordNetLemmatizer
 import matplotlib.pyplot as plt
 from collections import defaultdict
 from collections import Counter
+#subprocess.run(["pip", "install", "-U", "pip"])
+#subprocess.run(["pip", "install", "-U", "pillow"])
+#subprocess.run(["pip", "install", "-U", "Pillow"])
+#subprocess.run(["pip", "install", "-U", "wordcloud"])
+from wordcloud import WordCloud
+
+# I had a LOT of trouble getting textblob to import correctly
+# I ended up having to install it within the actual script, below
+#subprocess.run(["pip", "install", "-U", "textblob"])
+#subprocess.run(["python", "-m", "textblob.download_corpora"])
+from textblob import TextBlob
 #import re
 nltk.download('vader_lexicon')
 nltk.download('wordnet')
@@ -133,6 +147,10 @@ def sentiment_analysis(tex):
             this_speechs_sentiments.append(0)
     return (sum(this_speechs_sentiments) / len(this_speechs_sentiments))
 
+# find sentiment analysis another method
+def get_sentiment(tex):
+    return TextBlob(tex).sentiment
+
 # define find_grams function to take in a number and a text and return the top 15 most common n-grams
 def find_grams(gram_num, tex):
     top_grams_count = 15
@@ -232,6 +250,16 @@ if __name__ == "__main__":
     print()
     print(f"Cleaned Common Words, TIME: {timeit.default_timer() - start_time}")
     print(cleaned_fd.most_common(30))
+    
+    # Create an example wordcloud for my title page :)
+    fig, ax = plt.subplots(figsize=(6,6))
+    cloudtex = ' '.join(cleaned_words)
+    wordcloud = WordCloud(width=600, height=400, font_path='C:\\Windows\\WinSxS\\amd64_microsoft-windows-font-truetype-verdana_31bf3856ad364e35_10.0.22621.1_none_200eeed3f2ec147f\\verdana.ttf').generate(cloudtex)
+    plt.imshow(wordcloud, interpolation='bilinear') 
+    plt.axis("off")
+    plt.tight_layout()
+    plt.savefig('output/example_wordcloud.png', dpi=dpi)
+    
 
     # This is another test chart showing the amount of speeches each president gave
     #fig, ax = plt.subplots()
@@ -261,6 +289,24 @@ if __name__ == "__main__":
     print(f'df_president_speeches Cleaned Text, TIME: {timeit.default_timer() - start_time}')
     df_president_speeches['cleaned_text'] = df_president_speeches['text'].apply(clean_words)
     print(df_president_speeches.head())
+    
+    fig, ax = plt.subplots(figsize=(6,6))
+    filtered_df = df_president_speeches[df_president_speeches['prez'] == 'DonaldTrump']
+    all_words = ' '.join([' '.join(words) for words in filtered_df['cleaned_text']])
+    wordcloud = WordCloud(width=600, height=400, font_path='C:\\Windows\\WinSxS\\amd64_microsoft-windows-font-truetype-verdana_31bf3856ad364e35_10.0.22621.1_none_200eeed3f2ec147f\\verdana.ttf').generate(all_words)
+    plt.imshow(wordcloud, interpolation='bilinear') 
+    plt.axis("off")
+    plt.tight_layout()
+    plt.savefig('output/trump_wordcloud.png', dpi=dpi)
+    
+    fig, ax = plt.subplots(figsize=(6,6))
+    filtered_df = df_president_speeches[df_president_speeches['prez'] == 'GeorgeWashington']
+    all_words = ' '.join([' '.join(words) for words in filtered_df['cleaned_text']])
+    wordcloud = WordCloud(width=600, height=400, font_path='C:\\Windows\\WinSxS\\amd64_microsoft-windows-font-truetype-verdana_31bf3856ad364e35_10.0.22621.1_none_200eeed3f2ec147f\\verdana.ttf').generate(all_words)
+    plt.imshow(wordcloud, interpolation='bilinear') 
+    plt.axis("off")
+    plt.tight_layout()
+    plt.savefig('output/washington_wordcloud.png', dpi=dpi)
     
     ################################ WORD COUNT, WORD SUBSTANCE ANALYSIS ################################
     
@@ -352,6 +398,7 @@ if __name__ == "__main__":
     df_sorted_word_per_speech = df_president_speeches.sort_values(by='avg_word_per_speech', ascending=False)
     ax1.barh(df_sorted_word_per_speech['prez'], df_sorted_word_per_speech['avg_word_per_speech'], color='tab:blue')
     ax1.set(xlabel='Avg. Words per Speech', ylabel='President', title='Avg. Words per Speech by President')
+    ax1.tick_params(axis='y', labelsize=10)
     plt.tight_layout()
     plot1_filename = 'output/Word-Count-by-President-SORTED.png'
     fig1.savefig(plot1_filename, dpi=dpi)
@@ -430,11 +477,25 @@ if __name__ == "__main__":
     plot8_filename = 'output/Sentiment-by-President-SORTED.png'
     fig8.savefig(plot8_filename, dpi=dpi)
     
+    fig8, ax8 = plt.subplots(figsize=(6,6))
+    ax8.plot(df_sorted_sentiment_02['prez'], df_sorted_sentiment_02['sentiment_score'], color='tab:blue')
+    ax8.set(xlabel='Sentiment Score by President', ylabel='President', title='Sentiment by President')
+    plt.tight_layout()
+    plot8_filename = 'output/Line-Sentiment-by-President-SORTED.png'
+    fig8.savefig(plot8_filename, dpi=dpi)
+    
     fig9, ax9 = plt.subplots(figsize=(6,6))
     ax9.barh(df_president_speeches['prez'], df_president_speeches['sentiment_score'], color='tab:blue')
     ax9.set(xlabel='Sentiment Score by President', ylabel='President', title='Sentiment by President')
     plt.tight_layout()
     plot9_filename = 'output/Sentiment-by-President-CHRONO.png'
+    fig9.savefig(plot9_filename, dpi=dpi)
+    
+    fig9, ax9 = plt.subplots(figsize=(6,6))
+    ax9.plot(df_president_speeches['prez'], df_president_speeches['sentiment_score'], color='tab:blue')
+    ax9.set(xlabel='Sentiment Score by President', ylabel='President', title='Sentiment by President')
+    plt.tight_layout()
+    plot9_filename = 'output/Line-Sentiment-by-President-CHRONO.png'
     fig9.savefig(plot9_filename, dpi=dpi)
     
     fig10, ax10 = plt.subplots(figsize=(6,6))
@@ -588,6 +649,128 @@ if __name__ == "__main__":
     plt.tight_layout()
     plot21_filename = 'output/Sentiment-by-Year-of-Presidency-CHRONO.png'
     fig21.savefig(plot21_filename, dpi=dpi)
+    
+    # I want to find the total average sentiment by year of presidency, and see if this tells us anything
+    max_yop = df_speeches_sorted['year_of_prez'].max()
+    min_yop = df_speeches_sorted['year_of_prez'].min()
+    yop_values = []
+    avg_sentiment_values = []
+    for i in range(min_yop,9): #max_yop+1):
+        avg_sentiment = df_speeches_sorted[df_speeches_sorted['year_of_prez'] == i]['sentiment_score'].mean()   
+        print(f"Average sentiment for year of presidency {i}: {avg_sentiment}")
+        yop_values.append(i)
+        avg_sentiment_values.append(avg_sentiment)
+        
+    fig22, ax22 = plt.subplots(figsize=(6,6))
+    ax22.plot(yop_values, avg_sentiment_values, color='tab:blue')
+    ax22.set(xlabel='Year of Presidency', ylabel='Average Sentiment Score', title='Average Sentiment Score by Year of Presidency')
+    plt.tight_layout()
+    plot22_filename = 'output/Avg-Sentiment-by-Year-of-Presidency.png'
+    fig22.savefig(plot22_filename, dpi=dpi)
+    
+    # I want to also find the sentiment a 2nd method, using the TextBlob library. My first approach was underwhelming
+    df_speeches_sorted[['polarity', 'subjectivity']] = df_speeches_sorted['cleaned_text'].apply(lambda x: pd.Series(get_sentiment(' '.join(x))))
+    df_president_speeches[['polarity', 'subjectivity']] = df_president_speeches['cleaned_text'].apply(lambda x: pd.Series(get_sentiment(' '.join(x))))
+    
+    fig23, ax23 = plt.subplots(figsize=(6,6))
+    ax23.plot(df_speeches_sorted['year'], df_speeches_sorted['polarity'], color='tab:blue')
+    ax23.set(xlabel='Year', ylabel='Polarity', title='Polarity by Year')
+    plt.tight_layout()
+    plot23_filename = 'output/Polarity-by-Year-CHRONO.png' #line
+    fig23.savefig(plot23_filename, dpi=dpi)
+    
+    fig24, ax24 = plt.subplots(figsize=(6,6))
+    ax24.plot(df_speeches_sorted['year'], df_speeches_sorted['subjectivity'], color='tab:blue')
+    ax24.set(xlabel='Year', ylabel='Subjectivity', title='Subjectivity by Year')
+    plt.tight_layout()
+    plot24_filename = 'output/Subjectivity-by-Year-CHRONO.png' #line
+    fig24.savefig(plot24_filename, dpi=dpi)
+    
+    fig25, ax25 = plt.subplots(figsize=(6,6))
+    ax25.barh(df_president_speeches['prez'], df_president_speeches['polarity'], color='tab:blue')
+    ax25.set(xlabel='President', ylabel='Polarity', title='Polarity by President')
+    plt.tight_layout()
+    plot25_filename = 'output/Polarity-by-President-CHRONO.png' #bar, or switch line axes
+    fig25.savefig(plot25_filename, dpi=dpi)
+    
+    fig26, ax26 = plt.subplots(figsize=(6,6))
+    ax26.plot(df_president_speeches['prez'], df_president_speeches['subjectivity'], color='tab:blue')
+    ax26.set(xlabel='President', ylabel='Subjectivity', title='Subjectivity by President')
+    plt.tight_layout()
+    plot26_filename = 'output/Subjectivity-by-President-CHRONO.png'
+    fig26.savefig(plot26_filename, dpi=dpi)
+    
+    fig27, ax27 = plt.subplots(figsize=(6,6))
+    df_speeches_sorted_polarity = df_speeches_sorted.sort_values(by='polarity', ascending=False)  
+    ax27.plot(df_speeches_sorted_polarity['year'], df_speeches_sorted_polarity['polarity'], color='tab:blue')
+    ax27.set(xlabel='Year', ylabel='Polarity', title='Polarity by Year')
+    plt.tight_layout()
+    plot27_filename = 'output/Polarity-by-Year-SORTED.png'
+    fig27.savefig(plot27_filename, dpi=dpi)
+    
+    fig28, ax28 = plt.subplots(figsize=(6,6))
+    df_speeches_sorted_subjectivity = df_speeches_sorted.sort_values(by='subjectivity', ascending=False)
+    ax28.plot(df_speeches_sorted_subjectivity['year'], df_speeches_sorted_subjectivity['subjectivity'], color='tab:blue')
+    ax28.set(xlabel='Year', ylabel='Subjectivity', title='Subjectivity by Year')
+    plt.tight_layout()
+    plot28_filename = 'output/Subjectivity-by-Year-SORTED.png'
+    fig28.savefig(plot28_filename, dpi=dpi)
+    
+    fig29, ax29 = plt.subplots(figsize=(6,6))
+    df_president_speeches_polarity = df_president_speeches.sort_values(by='polarity', ascending=False)
+    ax29.plot(df_president_speeches_polarity['prez'], df_president_speeches_polarity['polarity'], color='tab:blue')
+    ax29.set(xlabel='President', ylabel='Polarity', title='Polarity by President')
+    plt.tight_layout()
+    plot29_filename = 'output/Polarity-by-President-SORTED.png'
+    fig29.savefig(plot29_filename, dpi=dpi)
+    
+    fig30, ax30 = plt.subplots(figsize=(6,6))
+    df_president_speeches_subjectivity = df_president_speeches.sort_values(by='subjectivity', ascending=False)
+    ax30.plot(df_president_speeches_subjectivity['prez'], df_president_speeches_subjectivity['subjectivity'], color='tab:blue')
+    ax30.set(xlabel='President', ylabel='Subjectivity', title='Subjectivity by President')
+    plt.tight_layout()
+    plot30_filename = 'output/Subjectivity-by-President-SORTED.png'
+    fig30.savefig(plot30_filename, dpi=dpi)
+    
+    yop_values2 = []
+    avg_polarity_values = []
+    avg_subjectivity_values = []
+    for i in range(min_yop,9): #max_yop+1):
+        avg_polarity = df_speeches_sorted[df_speeches_sorted['year_of_prez'] == i]['polarity'].mean()   
+        avg_subjectivity = df_speeches_sorted[df_speeches_sorted['year_of_prez'] == i]['subjectivity'].mean()   
+        print(f"Average polarity, subjectivity for year of presidency {i}: {avg_polarity}, {avg_subjectivity}")
+        yop_values2.append(i)
+        avg_polarity_values.append(avg_polarity)
+        avg_subjectivity_values.append(avg_subjectivity)
+        
+    fig31, ax31 = plt.subplots(figsize=(6,6))
+    ax31.plot(yop_values2, avg_polarity_values, color='tab:blue')
+    ax31.set(xlabel='Year of Presidency', ylabel='Average Polarity', title='Average Polarity by Year of Presidency')
+    plt.tight_layout()
+    plot31_filename = 'output/Avg-Polarity-by-Year-of-Presidency.png'
+    fig31.savefig(plot31_filename, dpi=dpi)
+    
+    fig32, ax32 = plt.subplots(figsize=(6,6))
+    ax32.plot(yop_values2, avg_subjectivity_values, color='tab:blue')
+    ax32.set(xlabel='Year of Presidency', ylabel='Average Subjectivity', title='Average Subjectivity by Year of Presidency')
+    plt.tight_layout()
+    plot32_filename = 'output/Avg-Subjectivity-by-Year-of-Presidency.png'
+    fig32.savefig(plot32_filename, dpi=dpi)
+    
+    print()
+    print('DF_SPEECHES COLUMNS AND HEAD')
+    print(df_speeches.columns)
+    print(df_speeches.head())
+    
+    print()
+    print('DF_SPEECHES_SORTED COLUMNS AND HEAD')
+    print(df_speeches_sorted.columns)
+    print(df_speeches_sorted.head())
+    
+    print()
+    print('DF_PRESIDENT_SPEECHES COLUMNS AND HEAD')
+    print(df_president_speeches.columns)
+    print(df_president_speeches.head())
     
     print()
     print(f'DONE, TOTAL TIME: {timeit.default_timer() - start_time} seconds')

@@ -102,6 +102,8 @@ My main analytical focus was that of sentiment analysis for this project. There 
 
 ![Sentiment by Year of Presidency](output/Avg-Polarity-by-Year-of-Presidency.png)
 
+![Sentiment by President](output/Line-Sentiment-by-President-SORTED.png)
+
 ![Polarity by President](output/Polarity-by-President-SORTED.png)
 
 ![Subjectivity by President](output/Subjectivity-by-President-SORTED.png)
@@ -109,6 +111,8 @@ My main analytical focus was that of sentiment analysis for this project. There 
 ![Sentiment by Year](output/Line-Sentiment-by-Year-CHRONO.png)
 
 ![Polarity by Year](output/Polarity-by-Year-CHRONO.png)
+
+# 1-gram / 2-gram / 3-gram Charts of Interest
 
 
 <a name="conclusions"/>

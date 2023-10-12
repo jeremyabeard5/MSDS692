@@ -53,7 +53,9 @@ For my analysis, I analyzed the most frequent 1-word, 2-word, and 3-word phrases
 Aside from the common 1/2/3-word phrases, I performed sentiment analysis using two different methods: one, using a text file of sentiment keys I gained during my studies at Regis University, and another, using the TextBlob python package. Some important charts are as follows:
 
 
+![Sentiment by Year of Presidency](output/Avg-Sentiment-by-Year-of-Presidency.png)
 
+![Sentiment by Year of Presidency](output/Avg-Polarity-by-Year-of-Presidency.png)
 
 
 ## Conclusions

@@ -9,7 +9,7 @@ by
 
 Jeremy Beard
 
-## Table of Contents
+# Table of Contents
 
 [Main Ideas](#mainideas)
 
@@ -26,7 +26,7 @@ Jeremy Beard
 
 <a name="mainideas"/>
 
-## Main Ideas
+# Main Ideas
 This project is centered around a dataset which contains speeches from the State of the Union of all presidents since George Washington! 
 
 The project will utilize a variety of natural language processing techniques in order to answer questions that have been created surrounding the dataset. Sentiment analysis will be utilized, general word commonality will be explored and word frequency will be analyzed. The final output will be a visualization comparing all the presidents to each other within the lens of the State of the Union.
@@ -35,7 +35,7 @@ The project will utilize a variety of natural language processing techniques in 
 
 <a name="methods"/>
 
-## Methods
+# Methods
 
 This project will seek to explore the State of the Union of each of the presidents! To get started, I wanted to formulate a list of questions that would guide me throughout my work on this State of the Union dataset. After some thinking, I main questions I set out to answer were:
 
@@ -66,7 +66,7 @@ This data cleaning worked out really well. I ended up with two main dataframes i
 
 <a name="results"/>
 
-## Results
+# Results
 
 For my results, I created a LOT of charts. I answered a LOT of questions. I definitely answered all the questions I set out to answer and more. All in all, I created about 611 charts throughout my scripting. Let's say that again. 611 CHARTS. 
 
@@ -74,19 +74,19 @@ For my analysis, I analyzed the most frequent 1-word, 2-word, and 3-word phrases
 
 Aside from the common 1/2/3-word phrases, I performed sentiment analysis using two different methods: one, using a text file of sentiment keys I gained during my studies at Regis University, and another, using the TextBlob python package. Some important charts are as follows:
 
-# Measuring Word Count 
+## Measuring Word Count 
 
 ![Word Count by President](output/Word-Count-by-President-SORTED.png)
 
 ![Word Count by Year](output/Word-Count-by-Year-CHRONO.png)
 
-# Measuring Speech Substance
+## Measuring Speech Substance
 
 I measured speech "substance" by taking a ratio of the word count AFTER cleaning / the word count BEFORE cleaning. Since cleaning removes the stopwords and filler material, this ratio will give a good measure of how much "fluff" was in the president's speech. 
 
 ![Speech Substance by President](output/Speech-Substance-by-President-SORTED.png)
 
-# Measuring Vocabulary / Amount of Unique Words per Speech
+## Measuring Vocabulary / Amount of Unique Words per Speech
 
 I wanted to see which presidents used more of a variety of words. The two charts below serve to show the amount of unique words used by each president, or by each year. From the charts below, it looks like the early presidents did **not** use a lot of unique words. Reagan, Obama, W. Bush, and Clinton also did not use a lot of different words in their speeches, compared to others.
 
@@ -94,7 +94,7 @@ I wanted to see which presidents used more of a variety of words. The two charts
 
 ![Vocabulary by Year](output/Unique-Words-by-Year-CHRONO.png)
 
-# Sentiment / Polarity / Subjectivity Measures
+## Sentiment / Polarity / Subjectivity Measures
 
 My main analytical focus was that of sentiment analysis for this project. There is not much business case for analyzing a dataset containing State of the Union speeches, but there can still be a whole lot of information gained from analysis on it! I utilized 'sentiment' as well as 'polarity' and 'subjectivity' to analyze the feeling of each speech. Explanations of each of these measures can be found in the 'Methods' section above but below are a few charts which give some insight into the sentiment, polarity, and subjectivity, of each president throughout the years. 
 
@@ -112,14 +112,25 @@ My main analytical focus was that of sentiment analysis for this project. There 
 
 ![Polarity by Year](output/Polarity-by-Year-CHRONO.png)
 
-# 1-gram / 2-gram / 3-gram Charts of Interest
+## 1-gram / 2-gram / 3-gram Charts of Interest
 
+![Washington 2-gram](output/Top-2Grams-by-President-1-GeorgeWashington.png)
+
+![Lincoln 2-gram](output/Top-2Grams-by-President-15-AbrahamLincoln.png)
+
+![Bush 2-gram](output/Top-2Grams-by-President-39-BillClinton.png)
+
+![Bush 3-gram](output/Top-3Grams-by-President-40-GeorgeWBush.png)
+
+![Obama 3-gram](output/Top-3Grams-by-President-41-BarackObama.png)
+
+![Trump 2-gram](output/Top-2Grams-by-President-42-DonaldTrump.png)
 
 <a name="conclusions"/>
 
-## Conclusions
+# Conclusions
 
-All in all, it seems like there really isn't a great correlation for presidential sentiment. However, year 6 seemed to be the golden time for a president as the sentiment and polarity both spiked upwards during those years while remaining relatively consistent during the other years. Year 6 appears to be a bit of a "victory lap" in the president's State of the Union address, noticeably more positive than the other years.
+All in all, it seems like there really isn't a great correlation for presidential sentiment. However, year 6 seemed to be the golden time for a president as the sentiment and polarity both spiked upwards during those years while remaining relatively consistent during the other years. Year 6 appears to be a bit of a "victory lap" in the president's State of the Union address, noticeably more positive than the other years. Nixon seemed to give short, positive State of the Union addresses, while Washington and the other founders gave short but more neutral speeches, with more fluff added in. Republican presidents of recent years had more positive speeches than Democratic presidents. 
 
 With regard to other measures like word count, common n-grams, speech substance, and more, it was really interesting to see each presidents' focus areas. The final answers to my questions were:
 
@@ -147,11 +158,11 @@ Similar answer as above :) the 1-word, 2-gram, and 3-gram charts all show the mo
 
 - Which presidents gave the longest speeches?
 
-
+On average, Theodore Roosevelt gave the longest speeches. James Polk, William Howard Taft, and William McKinley were all contenders as well.
 
 - Which presidents gave the shortest speeches?
 
-
+The earlier presidents seemed to give shorter speeches. Presidents like George Washington, John Adamas, James Madison, and Thomas Jefferson all ranked low on word count. 
 
 - Which presidents used the most unique words?
 
@@ -163,7 +174,7 @@ Similar answer to the vocabulary / variety of word measure, shown above.
 
 <a name="future"/>
 
-## Future Work
+# Future Work
 
 This project was a huge learning experience for me and really it gave me a lot of ideas for the next capstone course I be attending! I realized some pitfalls pretty quickly near the end of the project that I want to improve upon in the next capstone. I started to even think the dataset I was using wasn't great for text analytics within a political lens. What I mean is, the State of the Union address is often a formal and well-regulated speech. The differences in speech between different presidents are probably not as noticeable in the State of the Union due to its traditional and formal nature. In the future, I would love to source a different, more informal source of presidential speech. In addition to that, the other pitfalls I noticed can be found below. 
 
@@ -178,12 +189,16 @@ In the future, I'd like to improve upon all of these items. For my next capstone
 - I want to work with NUMERICAL data, after all the text analysis here
 - I want to make sure specific business questions are being addressed. This current project is more exploratory and was undergone out of historical significance
 
-Given all this, I have a lot to take forward for the future. This project was fun and interesting, but a lot could be improved upon in the next iteration. 
+Given all this, I have a lot to take forward for the future. This project was fun and interesting, but a lot could be improved upon in the next iteration.
+
+Thank you!
+Jeremy Beard 
 
 
 <a name="references"/>
 
-## References
+# References
+
 The dataset I used was located at: 
 https://www.kaggle.com/datasets/rtatman/state-of-the-union-corpus-1989-2017
 

@@ -1,0 +1,957 @@
+c:\Users\jerem\OneDrive\Documents\School\_REGIS\2023-08_Fall\MSDS692> c: && cd c:\Users\jerem\OneDrive\Documents\School\_REGIS\2023-08_Fall\MSDS692 && cmd /C "C:\Users\jerem\.conda\envs\DS-jupyter\python.exe c:\Users\jerem\.vscode\extensions\ms-python.python-2023.18.0\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher 51764 -- c:\Users\jerem\OneDrive\Documents\School\_REGIS\2023-08_Fall\MSDS692\president_sotu_speech.py "
+Hello World!
+[nltk_data] Downloading package vader_lexicon to
+[nltk_data]     C:\Users\jerem\AppData\Roaming\nltk_data...
+[nltk_data]   Package vader_lexicon is already up-to-date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\jerem\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to
+[nltk_data]     C:\Users\jerem\AppData\Roaming\nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+AbrahamLincoln_1861.txt
+AbrahamLincoln_1861.txt = AbrahamLincoln, 1861
+AbrahamLincoln_1862.txt
+AbrahamLincoln_1862.txt = AbrahamLincoln, 1862
+AbrahamLincoln_1863.txt
+AbrahamLincoln_1863.txt = AbrahamLincoln, 1863
+AbrahamLincoln_1864.txt
+AbrahamLincoln_1864.txt = AbrahamLincoln, 1864
+AndrewJackson_1829.txt
+AndrewJackson_1829.txt = AndrewJackson, 1829
+AndrewJackson_1830.txt
+AndrewJackson_1830.txt = AndrewJackson, 1830
+AndrewJackson_1831.txt
+AndrewJackson_1831.txt = AndrewJackson, 1831
+AndrewJackson_1832.txt
+AndrewJackson_1832.txt = AndrewJackson, 1832
+AndrewJackson_1833.txt
+AndrewJackson_1833.txt = AndrewJackson, 1833
+AndrewJackson_1834.txt
+AndrewJackson_1834.txt = AndrewJackson, 1834
+AndrewJackson_1835.txt
+AndrewJackson_1835.txt = AndrewJackson, 1835
+AndrewJackson_1836.txt
+AndrewJackson_1836.txt = AndrewJackson, 1836
+AndrewJohnson_1865.txt
+AndrewJohnson_1865.txt = AndrewJohnson, 1865
+AndrewJohnson_1866.txt
+AndrewJohnson_1866.txt = AndrewJohnson, 1866
+AndrewJohnson_1867.txt
+AndrewJohnson_1867.txt = AndrewJohnson, 1867
+AndrewJohnson_1868.txt
+AndrewJohnson_1868.txt = AndrewJohnson, 1868
+BarackObama_2009.txt
+BarackObama_2009.txt = BarackObama, 2009
+BarackObama_2010.txt
+BarackObama_2010.txt = BarackObama, 2010
+BarackObama_2011.txt
+BarackObama_2011.txt = BarackObama, 2011
+BarackObama_2012.txt
+BarackObama_2012.txt = BarackObama, 2012
+BarackObama_2013.txt
+BarackObama_2013.txt = BarackObama, 2013
+BarackObama_2014.txt
+BarackObama_2014.txt = BarackObama, 2014
+BarackObama_2015.txt
+BarackObama_2015.txt = BarackObama, 2015
+BarackObama_2016.txt
+BarackObama_2016.txt = BarackObama, 2016
+BenjaminHarrison_1889.txt
+BenjaminHarrison_1889.txt = BenjaminHarrison, 1889
+BenjaminHarrison_1890.txt
+BenjaminHarrison_1890.txt = BenjaminHarrison, 1890
+BenjaminHarrison_1891.txt
+BenjaminHarrison_1891.txt = BenjaminHarrison, 1891
+BenjaminHarrison_1892.txt
+BenjaminHarrison_1892.txt = BenjaminHarrison, 1892
+BillClinton_1993.txt
+BillClinton_1993.txt = BillClinton, 1993
+BillClinton_1994.txt
+BillClinton_1994.txt = BillClinton, 1994
+BillClinton_1995.txt
+BillClinton_1995.txt = BillClinton, 1995
+BillClinton_1996.txt
+BillClinton_1996.txt = BillClinton, 1996
+BillClinton_1997.txt
+BillClinton_1997.txt = BillClinton, 1997
+BillClinton_1998.txt
+BillClinton_1998.txt = BillClinton, 1998
+BillClinton_1999.txt
+BillClinton_1999.txt = BillClinton, 1999
+BillClinton_2000.txt
+BillClinton_2000.txt = BillClinton, 2000
+CalvinCoolidge_1923.txt
+CalvinCoolidge_1923.txt = CalvinCoolidge, 1923
+CalvinCoolidge_1924.txt
+CalvinCoolidge_1924.txt = CalvinCoolidge, 1924
+CalvinCoolidge_1925.txt
+CalvinCoolidge_1925.txt = CalvinCoolidge, 1925
+CalvinCoolidge_1926.txt
+CalvinCoolidge_1926.txt = CalvinCoolidge, 1926
+CalvinCoolidge_1927.txt
+CalvinCoolidge_1927.txt = CalvinCoolidge, 1927
+CalvinCoolidge_1928.txt
+CalvinCoolidge_1928.txt = CalvinCoolidge, 1928
+ChesterArthur_1881.txt
+ChesterArthur_1881.txt = ChesterArthur, 1881
+ChesterArthur_1882.txt
+ChesterArthur_1882.txt = ChesterArthur, 1882
+ChesterArthur_1883.txt
+ChesterArthur_1883.txt = ChesterArthur, 1883
+ChesterArthur_1884.txt
+ChesterArthur_1884.txt = ChesterArthur, 1884
+DonaldTrump_2017.txt
+DonaldTrump_2017.txt = DonaldTrump, 2017
+DonaldTrump_2018.txt
+DonaldTrump_2018.txt = DonaldTrump, 2018
+DwightEisenhower_1954.txt
+DwightEisenhower_1954.txt = DwightEisenhower, 1954
+DwightEisenhower_1955.txt
+DwightEisenhower_1955.txt = DwightEisenhower, 1955
+DwightEisenhower_1956.txt
+DwightEisenhower_1956.txt = DwightEisenhower, 1956
+DwightEisenhower_1957.txt
+DwightEisenhower_1957.txt = DwightEisenhower, 1957
+DwightEisenhower_1958.txt
+DwightEisenhower_1958.txt = DwightEisenhower, 1958
+DwightEisenhower_1959.txt
+DwightEisenhower_1959.txt = DwightEisenhower, 1959
+DwightEisenhower_1960.txt
+DwightEisenhower_1960.txt = DwightEisenhower, 1960
+DwightEisenhower_1961.txt
+DwightEisenhower_1961.txt = DwightEisenhower, 1961
+FranklinPierce_1853.txt
+FranklinPierce_1853.txt = FranklinPierce, 1853
+FranklinPierce_1854.txt
+FranklinPierce_1854.txt = FranklinPierce, 1854
+FranklinPierce_1855.txt
+FranklinPierce_1855.txt = FranklinPierce, 1855
+FranklinPierce_1856.txt
+FranklinPierce_1856.txt = FranklinPierce, 1856
+FranklinRoosevelt_1934.txt
+FranklinRoosevelt_1934.txt = FranklinRoosevelt, 1934
+FranklinRoosevelt_1935.txt
+FranklinRoosevelt_1935.txt = FranklinRoosevelt, 1935
+FranklinRoosevelt_1936.txt
+FranklinRoosevelt_1936.txt = FranklinRoosevelt, 1936
+FranklinRoosevelt_1937.txt
+FranklinRoosevelt_1937.txt = FranklinRoosevelt, 1937
+FranklinRoosevelt_1938.txt
+FranklinRoosevelt_1938.txt = FranklinRoosevelt, 1938
+FranklinRoosevelt_1939.txt
+FranklinRoosevelt_1939.txt = FranklinRoosevelt, 1939
+FranklinRoosevelt_1940.txt
+FranklinRoosevelt_1940.txt = FranklinRoosevelt, 1940
+FranklinRoosevelt_1941.txt
+FranklinRoosevelt_1941.txt = FranklinRoosevelt, 1941
+FranklinRoosevelt_1942.txt
+FranklinRoosevelt_1942.txt = FranklinRoosevelt, 1942
+FranklinRoosevelt_1943.txt
+FranklinRoosevelt_1943.txt = FranklinRoosevelt, 1943
+FranklinRoosevelt_1944.txt
+FranklinRoosevelt_1944.txt = FranklinRoosevelt, 1944
+FranklinRoosevelt_1945.txt
+FranklinRoosevelt_1945.txt = FranklinRoosevelt, 1945
+GeorgeHWBush_1989.txt
+GeorgeHWBush_1989.txt = GeorgeHWBush, 1989
+GeorgeHWBush_1990.txt
+GeorgeHWBush_1990.txt = GeorgeHWBush, 1990
+GeorgeHWBush_1991.txt
+GeorgeHWBush_1991.txt = GeorgeHWBush, 1991
+GeorgeHWBush_1992.txt
+GeorgeHWBush_1992.txt = GeorgeHWBush, 1992
+GeorgeWashington_1791.txt
+GeorgeWashington_1791.txt = GeorgeWashington, 1791
+GeorgeWashington_1792.txt
+GeorgeWashington_1792.txt = GeorgeWashington, 1792
+GeorgeWashington_1793.txt
+GeorgeWashington_1793.txt = GeorgeWashington, 1793
+GeorgeWashington_1794.txt
+GeorgeWashington_1794.txt = GeorgeWashington, 1794
+GeorgeWashington_1795.txt
+GeorgeWashington_1795.txt = GeorgeWashington, 1795
+GeorgeWashington_1796.txt
+GeorgeWashington_1796.txt = GeorgeWashington, 1796
+GeorgeWBush_2001.txt
+GeorgeWBush_2001.txt = GeorgeWBush, 2001
+GeorgeWBush_2002.txt
+GeorgeWBush_2002.txt = GeorgeWBush, 2002
+GeorgeWBush_2003.txt
+GeorgeWBush_2003.txt = GeorgeWBush, 2003
+GeorgeWBush_2004.txt
+GeorgeWBush_2004.txt = GeorgeWBush, 2004
+GeorgeWBush_2005.txt
+GeorgeWBush_2005.txt = GeorgeWBush, 2005
+GeorgeWBush_2006.txt
+GeorgeWBush_2006.txt = GeorgeWBush, 2006
+GeorgeWBush_2007.txt
+GeorgeWBush_2007.txt = GeorgeWBush, 2007
+GeorgeWBush_2008.txt
+GeorgeWBush_2008.txt = GeorgeWBush, 2008
+GeraldFord_1975.txt
+GeraldFord_1975.txt = GeraldFord, 1975
+GeraldFord_1976.txt
+GeraldFord_1976.txt = GeraldFord, 1976
+GeraldFord_1977.txt
+GeraldFord_1977.txt = GeraldFord, 1977
+GroverCleveland_1885.txt
+GroverCleveland_1885.txt = GroverCleveland, 1885
+GroverCleveland_1886.txt
+GroverCleveland_1886.txt = GroverCleveland, 1886
+GroverCleveland_1887.txt
+GroverCleveland_1887.txt = GroverCleveland, 1887
+GroverCleveland_1888.txt
+GroverCleveland_1888.txt = GroverCleveland, 1888
+GroverCleveland_1893.txt
+GroverCleveland_1893.txt = GroverCleveland, 1893
+GroverCleveland_1894.txt
+GroverCleveland_1894.txt = GroverCleveland, 1894
+GroverCleveland_1895.txt
+GroverCleveland_1895.txt = GroverCleveland, 1895
+GroverCleveland_1896.txt
+GroverCleveland_1896.txt = GroverCleveland, 1896
+HarryTruman_1946.txt
+HarryTruman_1946.txt = HarryTruman, 1946
+HarryTruman_1947.txt
+HarryTruman_1947.txt = HarryTruman, 1947
+HarryTruman_1948.txt
+HarryTruman_1948.txt = HarryTruman, 1948
+HarryTruman_1949.txt
+HarryTruman_1949.txt = HarryTruman, 1949
+HarryTruman_1950.txt
+HarryTruman_1950.txt = HarryTruman, 1950
+HarryTruman_1951.txt
+HarryTruman_1951.txt = HarryTruman, 1951
+HarryTruman_1952.txt
+HarryTruman_1952.txt = HarryTruman, 1952
+HarryTruman_1953.txt
+HarryTruman_1953.txt = HarryTruman, 1953
+HerbertHoover_1929.txt
+HerbertHoover_1929.txt = HerbertHoover, 1929
+HerbertHoover_1930.txt
+HerbertHoover_1930.txt = HerbertHoover, 1930
+HerbertHoover_1931.txt
+HerbertHoover_1931.txt = HerbertHoover, 1931
+HerbertHoover_1932.txt
+HerbertHoover_1932.txt = HerbertHoover, 1932
+JamesBuchanan_1857.txt
+JamesBuchanan_1857.txt = JamesBuchanan, 1857
+JamesBuchanan_1858.txt
+JamesBuchanan_1858.txt = JamesBuchanan, 1858
+JamesBuchanan_1859.txt
+JamesBuchanan_1859.txt = JamesBuchanan, 1859
+JamesBuchanan_1860.txt
+JamesBuchanan_1860.txt = JamesBuchanan, 1860
+JamesMadison_1809.txt
+JamesMadison_1809.txt = JamesMadison, 1809
+JamesMadison_1810.txt
+JamesMadison_1810.txt = JamesMadison, 1810
+JamesMadison_1811.txt
+JamesMadison_1811.txt = JamesMadison, 1811
+JamesMadison_1812.txt
+JamesMadison_1812.txt = JamesMadison, 1812
+JamesMadison_1813.txt
+JamesMadison_1813.txt = JamesMadison, 1813
+JamesMadison_1814.txt
+JamesMadison_1814.txt = JamesMadison, 1814
+JamesMadison_1815.txt
+JamesMadison_1815.txt = JamesMadison, 1815
+JamesMadison_1816.txt
+JamesMadison_1816.txt = JamesMadison, 1816
+JamesMonroe_1817.txt
+JamesMonroe_1817.txt = JamesMonroe, 1817
+JamesMonroe_1818.txt
+JamesMonroe_1818.txt = JamesMonroe, 1818
+JamesMonroe_1819.txt
+JamesMonroe_1819.txt = JamesMonroe, 1819
+JamesMonroe_1820.txt
+JamesMonroe_1820.txt = JamesMonroe, 1820
+JamesMonroe_1821.txt
+JamesMonroe_1821.txt = JamesMonroe, 1821
+JamesMonroe_1822.txt
+JamesMonroe_1822.txt = JamesMonroe, 1822
+JamesMonroe_1823.txt
+JamesMonroe_1823.txt = JamesMonroe, 1823
+JamesMonroe_1824.txt
+JamesMonroe_1824.txt = JamesMonroe, 1824
+JamesPolk_1845.txt
+JamesPolk_1845.txt = JamesPolk, 1845
+JamesPolk_1846.txt
+JamesPolk_1846.txt = JamesPolk, 1846
+JamesPolk_1847.txt
+JamesPolk_1847.txt = JamesPolk, 1847
+JamesPolk_1848.txt
+JamesPolk_1848.txt = JamesPolk, 1848
+JimmyCarter_1978.txt
+JimmyCarter_1978.txt = JimmyCarter, 1978
+JimmyCarter_1979.txt
+JimmyCarter_1979.txt = JimmyCarter, 1979
+JimmyCarter_1980.txt
+JimmyCarter_1980.txt = JimmyCarter, 1980
+JimmyCarter_1981.txt
+JimmyCarter_1981.txt = JimmyCarter, 1981
+JohnAdams_1797.txt
+JohnAdams_1797.txt = JohnAdams, 1797
+JohnAdams_1798.txt
+JohnAdams_1798.txt = JohnAdams, 1798
+JohnAdams_1799.txt
+JohnAdams_1799.txt = JohnAdams, 1799
+JohnAdams_1800.txt
+JohnAdams_1800.txt = JohnAdams, 1800
+JohnKennedy_1962.txt
+JohnKennedy_1962.txt = JohnKennedy, 1962
+JohnKennedy_1963.txt
+JohnKennedy_1963.txt = JohnKennedy, 1963
+JohnQuincyAdams_1825.txt
+JohnQuincyAdams_1825.txt = JohnQuincyAdams, 1825
+JohnQuincyAdams_1826.txt
+JohnQuincyAdams_1826.txt = JohnQuincyAdams, 1826
+JohnQuincyAdams_1827.txt
+JohnQuincyAdams_1827.txt = JohnQuincyAdams, 1827
+JohnQuincyAdams_1828.txt
+JohnQuincyAdams_1828.txt = JohnQuincyAdams, 1828
+JohnTyler_1841.txt
+JohnTyler_1841.txt = JohnTyler, 1841
+JohnTyler_1842.txt
+JohnTyler_1842.txt = JohnTyler, 1842
+JohnTyler_1843.txt
+JohnTyler_1843.txt = JohnTyler, 1843
+JohnTyler_1844.txt
+JohnTyler_1844.txt = JohnTyler, 1844
+LyndonJohnson_1964.txt
+LyndonJohnson_1964.txt = LyndonJohnson, 1964
+LyndonJohnson_1965.txt
+LyndonJohnson_1965.txt = LyndonJohnson, 1965
+LyndonJohnson_1966.txt
+LyndonJohnson_1966.txt = LyndonJohnson, 1966
+LyndonJohnson_1967.txt
+LyndonJohnson_1967.txt = LyndonJohnson, 1967
+LyndonJohnson_1968.txt
+LyndonJohnson_1968.txt = LyndonJohnson, 1968
+LyndonJohnson_1969.txt
+LyndonJohnson_1969.txt = LyndonJohnson, 1969
+MartinVanBuren_1837.txt
+MartinVanBuren_1837.txt = MartinVanBuren, 1837
+MartinVanBuren_1838.txt
+MartinVanBuren_1838.txt = MartinVanBuren, 1838
+MartinVanBuren_1839.txt
+MartinVanBuren_1839.txt = MartinVanBuren, 1839
+MartinVanBuren_1840.txt
+MartinVanBuren_1840.txt = MartinVanBuren, 1840
+MillardFillmore_1850.txt
+MillardFillmore_1850.txt = MillardFillmore, 1850
+MillardFillmore_1851.txt
+MillardFillmore_1851.txt = MillardFillmore, 1851
+MillardFillmore_1852.txt
+MillardFillmore_1852.txt = MillardFillmore, 1852
+RichardNixon_1970.txt
+RichardNixon_1970.txt = RichardNixon, 1970
+RichardNixon_1971.txt
+RichardNixon_1971.txt = RichardNixon, 1971
+RichardNixon_1972.txt
+RichardNixon_1972.txt = RichardNixon, 1972
+RichardNixon_1973.txt
+RichardNixon_1973.txt = RichardNixon, 1973
+RichardNixon_1974.txt
+RichardNixon_1974.txt = RichardNixon, 1974
+RonaldReagan_1982.txt
+RonaldReagan_1982.txt = RonaldReagan, 1982
+RonaldReagan_1983.txt
+RonaldReagan_1983.txt = RonaldReagan, 1983
+RonaldReagan_1984.txt
+RonaldReagan_1984.txt = RonaldReagan, 1984
+RonaldReagan_1985.txt
+RonaldReagan_1985.txt = RonaldReagan, 1985
+RonaldReagan_1986.txt
+RonaldReagan_1986.txt = RonaldReagan, 1986
+RonaldReagan_1987.txt
+RonaldReagan_1987.txt = RonaldReagan, 1987
+RonaldReagan_1988.txt
+RonaldReagan_1988.txt = RonaldReagan, 1988
+RutherfordHayes_1877.txt
+RutherfordHayes_1877.txt = RutherfordHayes, 1877
+RutherfordHayes_1878.txt
+RutherfordHayes_1878.txt = RutherfordHayes, 1878
+RutherfordHayes_1879.txt
+RutherfordHayes_1879.txt = RutherfordHayes, 1879
+RutherfordHayes_1880.txt
+RutherfordHayes_1880.txt = RutherfordHayes, 1880
+TheodoreRoosevelt_1901.txt
+TheodoreRoosevelt_1901.txt = TheodoreRoosevelt, 1901
+TheodoreRoosevelt_1902.txt
+TheodoreRoosevelt_1902.txt = TheodoreRoosevelt, 1902
+TheodoreRoosevelt_1903.txt
+TheodoreRoosevelt_1903.txt = TheodoreRoosevelt, 1903
+TheodoreRoosevelt_1904.txt
+TheodoreRoosevelt_1904.txt = TheodoreRoosevelt, 1904
+TheodoreRoosevelt_1905.txt
+TheodoreRoosevelt_1905.txt = TheodoreRoosevelt, 1905
+TheodoreRoosevelt_1906.txt
+TheodoreRoosevelt_1906.txt = TheodoreRoosevelt, 1906
+TheodoreRoosevelt_1907.txt
+TheodoreRoosevelt_1907.txt = TheodoreRoosevelt, 1907
+TheodoreRoosevelt_1908.txt
+TheodoreRoosevelt_1908.txt = TheodoreRoosevelt, 1908
+ThomasJefferson_1801.txt
+ThomasJefferson_1801.txt = ThomasJefferson, 1801
+ThomasJefferson_1802.txt
+ThomasJefferson_1802.txt = ThomasJefferson, 1802
+ThomasJefferson_1803.txt
+ThomasJefferson_1803.txt = ThomasJefferson, 1803
+ThomasJefferson_1804.txt
+ThomasJefferson_1804.txt = ThomasJefferson, 1804
+ThomasJefferson_1805.txt
+ThomasJefferson_1805.txt = ThomasJefferson, 1805
+ThomasJefferson_1806.txt
+ThomasJefferson_1806.txt = ThomasJefferson, 1806
+ThomasJefferson_1807.txt
+ThomasJefferson_1807.txt = ThomasJefferson, 1807
+ThomasJefferson_1808.txt
+ThomasJefferson_1808.txt = ThomasJefferson, 1808
+UlyssesGrant_1869.txt
+UlyssesGrant_1869.txt = UlyssesGrant, 1869
+UlyssesGrant_1870.txt
+UlyssesGrant_1870.txt = UlyssesGrant, 1870
+UlyssesGrant_1871.txt
+UlyssesGrant_1871.txt = UlyssesGrant, 1871
+UlyssesGrant_1872.txt
+UlyssesGrant_1872.txt = UlyssesGrant, 1872
+UlyssesGrant_1873.txt
+UlyssesGrant_1873.txt = UlyssesGrant, 1873
+UlyssesGrant_1874.txt
+UlyssesGrant_1874.txt = UlyssesGrant, 1874
+UlyssesGrant_1875.txt
+UlyssesGrant_1875.txt = UlyssesGrant, 1875
+UlyssesGrant_1876.txt
+UlyssesGrant_1876.txt = UlyssesGrant, 1876
+WarrenHarding_1921.txt
+WarrenHarding_1921.txt = WarrenHarding, 1921
+WarrenHarding_1922.txt
+WarrenHarding_1922.txt = WarrenHarding, 1922
+WilliamMcKinley_1897.txt
+WilliamMcKinley_1897.txt = WilliamMcKinley, 1897
+WilliamMcKinley_1898.txt
+WilliamMcKinley_1898.txt = WilliamMcKinley, 1898
+WilliamMcKinley_1899.txt
+WilliamMcKinley_1899.txt = WilliamMcKinley, 1899
+WilliamMcKinley_1900.txt
+WilliamMcKinley_1900.txt = WilliamMcKinley, 1900
+WilliamTaft_1909.txt
+WilliamTaft_1909.txt = WilliamTaft, 1909
+WilliamTaft_1910.txt
+WilliamTaft_1910.txt = WilliamTaft, 1910
+WilliamTaft_1911.txt
+WilliamTaft_1911.txt = WilliamTaft, 1911
+WilliamTaft_1912.txt
+WilliamTaft_1912.txt = WilliamTaft, 1912
+WoodrowWilson_1913.txt
+WoodrowWilson_1913.txt = WoodrowWilson, 1913
+WoodrowWilson_1914.txt
+WoodrowWilson_1914.txt = WoodrowWilson, 1914
+WoodrowWilson_1915.txt
+WoodrowWilson_1915.txt = WoodrowWilson, 1915
+WoodrowWilson_1916.txt
+WoodrowWilson_1916.txt = WoodrowWilson, 1916
+WoodrowWilson_1917.txt
+WoodrowWilson_1917.txt = WoodrowWilson, 1917
+WoodrowWilson_1918.txt
+WoodrowWilson_1918.txt = WoodrowWilson, 1918
+WoodrowWilson_1919.txt
+WoodrowWilson_1919.txt = WoodrowWilson, 1919
+WoodrowWilson_1920.txt
+WoodrowWilson_1920.txt = WoodrowWilson, 1920
+ZacharyTaylor_1849.txt
+ZacharyTaylor_1849.txt = ZacharyTaylor, 1849
+
+Done reading in speeches, TIME: 6.679489000001922
+Sorting presidents, TIME: 6.6851746999891475
+
+DF_SPEECHES COLUMNS AND HEAD
+Index(['prez', 'year', 'text', 'year_of_prez'], dtype='object')
+             prez  year                                               text  year_of_prez
+0  AbrahamLincoln  1861  Fellow-Citizens of the Senate and House of Rep...             1
+1  AbrahamLincoln  1862  Fellow-Citizens of the Senate and House of Rep...             2
+2  AbrahamLincoln  1863  Fellow-Citizens of the Senate and House of Rep...             3
+3  AbrahamLincoln  1864  Fellow-Citizens of the Senate and House of Rep...             4
+4   AndrewJackson  1829  Fellow Citizens of the Senate and of the House...             1
+
+DF_SPEECHES_SORTED COLUMNS AND HEAD
+Index(['prez', 'year', 'text', 'year_of_prez'], dtype='object')
+               prez  year                                               text  year_of_prez
+0  GeorgeWashington  1791  Fellow-Citizens of the Senate and House of Rep...             1
+1  GeorgeWashington  1792  Fellow-Citizens of the Senate and House of Rep...             2
+2  GeorgeWashington  1793  Fellow-Citizens of the Senate and House of Rep...             3
+3  GeorgeWashington  1794  Fellow-Citizens of the Senate and House of Rep...             4
+4  GeorgeWashington  1795  Fellow-Citizens of the Senate and House of Rep...             5
+
+DF_PRESIDENT_SPEECHES COLUMNS AND HEAD
+Index(['prez', 'text', 'num_spchs'], dtype='object')
+               prez                                               text  num_spchs
+0  GeorgeWashington  Fellow-Citizens of the Senate and House of Rep...          6
+1         JohnAdams  Gentlemen of the Senate and Gentlemen of the H...          4
+2   ThomasJefferson  Fellow Citizens of the Senate and House of Rep...          8
+3      JamesMadison  Fellow-Citizens of the Senate and House of Rep...          8
+4       JamesMonroe  Fellow-Citizens of the Senate and House of Rep...          8
+
+Uncleaned Common Words, TIME: 8.443797399988398
+[('the', 137568), ('of', 95751), ('to', 59303), ('and', 58152), ('in', 35144), ('a', 26490), ('that', 20616), ('be', 18383), ('for', 18054), ('is', 16519), ('our', 15828), ('by', 14445), ('have', 11858), ('which', 11818), ('The', 11435), ('with', 11374), ('as', 11287), ('it', 9987), ('this', 9570), ('I', 9097), ('will', 9093), ('has', 8912), ('on', 8802), ('are', 8753), ('been', 8655), ('we', 8542), ('not', 8539), ('their', 7560), ('from', 7106), ('at', 6480)]
+
+Cleaned Common Words, TIME: 15.546432200004347
+[('government', 5134), ('united', 4774), ('states', 4457), ('upon', 3866), ('would', 3688), ('congress', 3611), ('may', 3273), ('great', 3171), ('must', 3162), ('public', 2933), ('new', 2919), ('people', 2861), ('made', 2850), ('american', 2548), ('one', 2506), ('year', 2455), ('time', 2382), ('last', 2349), ('every', 2229), ('national', 2084), ('country', 2060), ('present', 1986), ('us', 1958), ('war', 1877), ('shall', 1856), ('state', 1807), ('make', 1798), ('without', 1749), ('also', 1685), ('many', 1669)]
+
+Creating cleaned_text column in df_speeches, TIME: 25.561672399984673
+             prez  year  ... year_of_prez                                       cleaned_text
+0  AbrahamLincoln  1861  ...            1  [fellow, citizen, senate, house, representativ...        
+1  AbrahamLincoln  1862  ...            2  [fellow, citizen, senate, house, representativ...        
+2  AbrahamLincoln  1863  ...            3  [fellow, citizen, senate, house, representativ...        
+3  AbrahamLincoln  1864  ...            4  [fellow, citizen, senate, house, representativ...        
+4   AndrewJackson  1829  ...            1  [fellow, citizen, senate, house, representativ...        
+
+[5 rows x 5 columns]
+
+df_speeches_sorted Cleaned Text, TIME: 45.32726890000049
+               prez  year  ... year_of_prez                                       cleaned_text
+0  GeorgeWashington  1791  ...            1  [fellow, citizen, senate, house, representativ...      
+1  GeorgeWashington  1792  ...            2  [fellow, citizen, senate, house, representativ...      
+2  GeorgeWashington  1793  ...            3  [fellow, citizen, senate, house, representativ...      
+3  GeorgeWashington  1794  ...            4  [fellow, citizen, senate, house, representativ...      
+4  GeorgeWashington  1795  ...            5  [fellow, citizen, senate, house, representativ...      
+
+[5 rows x 5 columns]
+
+df_president_speeches Cleaned Text, TIME: 61.54634000000078
+               prez  ...                                       cleaned_text
+0  GeorgeWashington  ...  [fellow, citizen, senate, house, representativ...
+1         JohnAdams  ...  [gentleman, senate, gentleman, house, represen...
+2   ThomasJefferson  ...  [fellow, citizen, senate, house, representativ...
+3      JamesMadison  ...  [fellow, citizen, senate, house, representativ...
+4       JamesMonroe  ...  [fellow, citizen, senate, house, representativ...
+
+[5 rows x 4 columns]
+
+Creating word_count and cleaned_word_count columns in df_speeches and df_president_speeches, TIME: 82.50638189999154
+                 prez  num_spchs  ...  avg_cleaned_word_per_speech  word_substance
+0    GeorgeWashington          6  ...                         1095        0.465166
+1           JohnAdams          4  ...                          831        0.465025
+2     ThomasJefferson          8  ...                         1194        0.461717
+3        JamesMadison          8  ...                         1261        0.465314
+4         JamesMonroe          8  ...                         2373        0.448752
+5     JohnQuincyAdams          4  ...                         3525        0.454136
+6       AndrewJackson          8  ...                         4880        0.458431
+7      MartinVanBuren          4  ...                         5307        0.468527
+8           JohnTyler          4  ...                         3956        0.465795
+9           JamesPolk          4  ...                         8383        0.465541
+10      ZacharyTaylor          1  ...                         3544        0.465153
+11    MillardFillmore          3  ...                         4882        0.465263
+12     FranklinPierce          4  ...                         5005        0.478947
+13      JamesBuchanan          4  ...                         6680        0.474129
+14     AbrahamLincoln          4  ...                         3272        0.476551
+15      AndrewJohnson          4  ...                         4551        0.477294
+16       UlyssesGrant          8  ...                         3863        0.474803
+17    RutherfordHayes          4  ...                         4113        0.480715
+18      ChesterArthur          4  ...                         2376        0.484502
+19    GroverCleveland          8  ...                         6547        0.487346
+20   BenjaminHarrison          4  ...                         6410        0.470562
+21    WilliamMcKinley          4  ...                         8235        0.494743
+22  TheodoreRoosevelt          8  ...                         9494        0.483795
+23        WilliamTaft          4  ...                         8511        0.489842
+24      WoodrowWilson          8  ...                         2021        0.465776
+25      WarrenHarding          2  ...                         2848        0.502027
+26     CalvinCoolidge          6  ...                         4217        0.489893
+27      HerbertHoover          4  ...                         3206        0.504247
+28  FranklinRoosevelt         12  ...                         1946        0.496682
+29        HarryTruman          8  ...                         4244        0.512251
+30   DwightEisenhower          8  ...                         3221        0.546303
+31        JohnKennedy          2  ...                         3114        0.529592
+32      LyndonJohnson          6  ...                         2357        0.489309
+33       RichardNixon          5  ...                         1864        0.473096
+34         GeraldFord          3  ...                         2379        0.521253
+35        JimmyCarter          4  ...                         6174        0.551496
+36       RonaldReagan          7  ...                         2380        0.518293
+37       GeorgeHWBush          4  ...                         2141        0.501758
+38        BillClinton          8  ...                         3733        0.508722
+39        GeorgeWBush          8  ...                         2664        0.526586
+40        BarackObama          8  ...                         3318        0.506797
+41        DonaldTrump          2  ...                         2647        0.517801
+
+[42 rows x 7 columns]
+
+Top Words by President
+                 prez                                          top_words
+0    GeorgeWashington  [(state, 107), (united, 80), (may, 58), (publi...
+1           JohnAdams  [(state, 58), (united, 49), (gentleman, 26), (...
+2     ThomasJefferson  [(may, 96), (state, 78), (shall, 66), (country...
+3        JamesMadison  [(state, 116), (war, 89), (united, 81), (gover...
+4         JamesMonroe  [(state, 300), (government, 214), (united, 184...
+5     JohnQuincyAdams  [(state, 182), (upon, 159), (year, 134), (cong...
+6       AndrewJackson  [(state, 582), (government, 495), (upon, 311),...
+7      MartinVanBuren  [(government, 287), (state, 283), (public, 207...
+8           JohnTyler  [(state, 237), (government, 227), (would, 137)...
+9           JamesPolk  [(state, 511), (government, 373), (mexico, 360...
+10      ZacharyTaylor  [(state, 56), (congress, 38), (government, 37)...
+11    MillardFillmore  [(state, 189), (government, 155), (country, 11...
+12     FranklinPierce  [(state, 441), (government, 214), (united, 200...
+13      JamesBuchanan  [(state, 472), (government, 322), (would, 254)...
+14     AbrahamLincoln  [(state, 195), (would, 99), (government, 86), ...
+15      AndrewJohnson  [(state, 359), (government, 226), (united, 134...
+16       UlyssesGrant  [(state, 498), (united, 341), (government, 321...
+17    RutherfordHayes  [(state, 186), (government, 175), (congress, 1...
+18      ChesterArthur  [(government, 144), (state, 112), (country, 81...
+19    GroverCleveland  [(government, 602), (year, 512), (state, 445),...
+20   BenjaminHarrison  [(state, 307), (upon, 246), (year, 234), (gove...
+21    WilliamMcKinley  [(government, 460), (state, 413), (united, 293...
+22  TheodoreRoosevelt  [(government, 578), (law, 561), (state, 557), ...
+23        WilliamTaft  [(government, 432), (state, 388), (american, 2...
+24      WoodrowWilson  [(upon, 142), (government, 132), (must, 117), ...
+25      WarrenHarding  [(government, 42), (world, 40), (public, 40), ...
+26     CalvinCoolidge  [(government, 296), (country, 198), (made, 174...
+27      HerbertHoover  [(government, 140), (year, 115), (upon, 105), ...
+28  FranklinRoosevelt  [(war, 263), (nation, 262), (people, 182), (wo...
+29        HarryTruman  [(year, 386), (war, 320), (world, 317), (natio...
+30   DwightEisenhower  [(year, 235), (nation, 223), (must, 207), (pro...
+31        JohnKennedy  [(nation, 67), (new, 59), (year, 55), (world, ...
+32      LyndonJohnson  [(year, 200), (must, 147), (nation, 143), (ame...
+33       RichardNixon  [(year, 160), (america, 120), (new, 115), (peo...
+34         GeraldFord  [(year, 95), (federal, 64), (american, 61), (n...
+35        JimmyCarter  [(year, 260), (nation, 195), (program, 186), (...
+36       RonaldReagan  [(year, 187), (america, 176), (american, 151),...
+37       GeorgeHWBush  [(must, 107), (america, 94), (american, 86), (...
+38        BillClinton  [(year, 417), (american, 343), (people, 325), ...
+39        GeorgeWBush  [(america, 244), (american, 192), (must, 188),...
+40        BarackObama  [(american, 316), (year, 305), (job, 252), (am...
+41        DonaldTrump  [(american, 103), (america, 56), (year, 48), (...
+
+Top Words by President
+                 prez                                          top_words
+0    GeorgeWashington  [(state, 19), (united, 17), (may, 13), (public...
+1    GeorgeWashington  [(upon, 11), (law, 11), (provision, 10), (stat...
+2    GeorgeWashington  [(state, 25), (united, 22), (may, 8), (public,...
+3    GeorgeWashington  [(state, 21), (united, 15), (government, 15), ...
+4    GeorgeWashington  [(indian, 10), (state, 8), (country, 8), (publ...
+..                ...                                                ...
+222       BarackObama  [(american, 48), (year, 39), (job, 38), (ameri...
+223       BarackObama  [(year, 41), (new, 41), (america, 38), (americ...
+224       BarackObama  [(year, 35), (american, 31), (america, 26), (w...
+225       DonaldTrump  [(american, 48), (america, 29), (country, 26),...
+226       DonaldTrump  [(american, 55), (year, 29), (america, 27), (p...
+
+[227 rows x 2 columns]
+
+Unique Words by President
+                 prez  unique_words_total  unique_words_per_speech
+0    GeorgeWashington                2335               389.166667
+1           JohnAdams                1390               347.500000
+2     ThomasJefferson                2547               318.375000
+3        JamesMadison                2832               354.000000
+4         JamesMonroe                3219               402.375000
+5     JohnQuincyAdams                3247               811.750000
+6       AndrewJackson                4945               618.125000
+7      MartinVanBuren                3936               984.000000
+8           JohnTyler                3484               871.000000
+9           JamesPolk                4450              1112.500000
+10      ZacharyTaylor                1523              1523.000000
+11    MillardFillmore                3471              1157.000000
+12     FranklinPierce                4033              1008.250000
+13      JamesBuchanan                4176              1044.000000
+14     AbrahamLincoln                3244               811.000000
+15      AndrewJohnson                3852               963.000000
+16       UlyssesGrant                4753               594.125000
+17    RutherfordHayes                3422               855.500000
+18      ChesterArthur                2801               700.250000
+19    GroverCleveland                6617               827.125000
+20   BenjaminHarrison                4436              1109.000000
+21    WilliamMcKinley                5525              1381.250000
+22  TheodoreRoosevelt                7688               961.000000
+23        WilliamTaft                4983              1245.750000
+24      WoodrowWilson                3560               445.000000
+25      WarrenHarding                2106              1053.000000
+26     CalvinCoolidge                4168               694.666667
+27      HerbertHoover                2835               708.750000
+28  FranklinRoosevelt                4472               372.666667
+29        HarryTruman                4393               549.125000
+30   DwightEisenhower                4320               540.000000
+31        JohnKennedy                2218              1109.000000
+32      LyndonJohnson                3078               513.000000
+33       RichardNixon                2255               451.000000
+34         GeraldFord                2180               726.666667
+35        JimmyCarter                4072              1018.000000
+36       RonaldReagan                3654               522.000000
+37       GeorgeHWBush                2451               612.750000
+38        BillClinton                4160               520.000000
+39        GeorgeWBush                3876               484.500000
+40        BarackObama                4207               525.875000
+41        DonaldTrump                1976               988.000000
+
+Unique Words by Year
+                 prez  unique_words
+0    GeorgeWashington           663
+1    GeorgeWashington           621
+2    GeorgeWashington           653
+3    GeorgeWashington           968
+4    GeorgeWashington           674
+..                ...           ...
+222       BarackObama          1472
+223       BarackObama          1407
+224       BarackObama          1280
+225       DonaldTrump          1217
+226       DonaldTrump          1333
+
+[227 rows x 2 columns]
+
+Done creating top words, top 2-grams, top 3-grams, and unique words, TIME: 89.41905440000119        
+
+Created initial word count / word frequency figures, TIME: 94.3284822999849
+
+                 prez  num_spchs  ...  word_substance  sentiment_score
+0    GeorgeWashington          6  ...        0.465166         0.089014
+1           JohnAdams          4  ...        0.465025         0.098888
+2     ThomasJefferson          8  ...        0.461717         0.069485
+3        JamesMadison          8  ...        0.465314         0.082921
+4         JamesMonroe          8  ...        0.448752         0.117811
+5     JohnQuincyAdams          4  ...        0.454136         0.103879
+6       AndrewJackson          8  ...        0.458431         0.091957
+7      MartinVanBuren          4  ...        0.468527         0.075930
+8           JohnTyler          4  ...        0.465795         0.091633
+9           JamesPolk          4  ...        0.465541         0.059818
+10      ZacharyTaylor          1  ...        0.465153         0.098476
+11    MillardFillmore          3  ...        0.465263         0.087458
+12     FranklinPierce          4  ...        0.478947         0.062534
+13      JamesBuchanan          4  ...        0.474129         0.037012
+14     AbrahamLincoln          4  ...        0.476551         0.067843
+15      AndrewJohnson          4  ...        0.477294         0.069149
+16       UlyssesGrant          8  ...        0.474803         0.089062
+17    RutherfordHayes          4  ...        0.480715         0.106351
+18      ChesterArthur          4  ...        0.484502         0.086700
+19    GroverCleveland          8  ...        0.487346         0.075350
+20   BenjaminHarrison          4  ...        0.470562         0.082566
+21    WilliamMcKinley          4  ...        0.494743         0.089860
+22  TheodoreRoosevelt          8  ...        0.483795         0.061565
+23        WilliamTaft          4  ...        0.489842         0.094076
+24      WoodrowWilson          8  ...        0.465776         0.090336
+25      WarrenHarding          2  ...        0.502027         0.029138
+26     CalvinCoolidge          6  ...        0.489893         0.107954
+27      HerbertHoover          4  ...        0.504247         0.048733
+28  FranklinRoosevelt         12  ...        0.496682         0.051117
+29        HarryTruman          8  ...        0.512251         0.096958
+30   DwightEisenhower          8  ...        0.546303         0.138124
+31        JohnKennedy          2  ...        0.529592         0.104190
+32      LyndonJohnson          6  ...        0.489309         0.100170
+33       RichardNixon          5  ...        0.473096         0.132604
+34         GeraldFord          3  ...        0.521253         0.090922
+35        JimmyCarter          4  ...        0.551496         0.106896
+36       RonaldReagan          7  ...        0.518293         0.130153
+37       GeorgeHWBush          4  ...        0.501758         0.107389
+38        BillClinton          8  ...        0.508722         0.092029
+39        GeorgeWBush          8  ...        0.526586         0.087130
+40        BarackObama          8  ...        0.506797         0.079209
+41        DonaldTrump          2  ...        0.517801         0.085946
+
+[42 rows x 8 columns]
+
+Printing sorted sentiment scores, TIME: 94.7825712999911
+                 prez  num_spchs  ...  word_substance  sentiment_score
+30   DwightEisenhower          8  ...        0.546303         0.138124
+33       RichardNixon          5  ...        0.473096         0.132604
+36       RonaldReagan          7  ...        0.518293         0.130153
+4         JamesMonroe          8  ...        0.448752         0.117811
+26     CalvinCoolidge          6  ...        0.489893         0.107954
+37       GeorgeHWBush          4  ...        0.501758         0.107389
+35        JimmyCarter          4  ...        0.551496         0.106896
+17    RutherfordHayes          4  ...        0.480715         0.106351
+31        JohnKennedy          2  ...        0.529592         0.104190
+5     JohnQuincyAdams          4  ...        0.454136         0.103879
+32      LyndonJohnson          6  ...        0.489309         0.100170
+1           JohnAdams          4  ...        0.465025         0.098888
+10      ZacharyTaylor          1  ...        0.465153         0.098476
+29        HarryTruman          8  ...        0.512251         0.096958
+23        WilliamTaft          4  ...        0.489842         0.094076
+38        BillClinton          8  ...        0.508722         0.092029
+6       AndrewJackson          8  ...        0.458431         0.091957
+8           JohnTyler          4  ...        0.465795         0.091633
+34         GeraldFord          3  ...        0.521253         0.090922
+24      WoodrowWilson          8  ...        0.465776         0.090336
+21    WilliamMcKinley          4  ...        0.494743         0.089860
+16       UlyssesGrant          8  ...        0.474803         0.089062
+0    GeorgeWashington          6  ...        0.465166         0.089014
+11    MillardFillmore          3  ...        0.465263         0.087458
+39        GeorgeWBush          8  ...        0.526586         0.087130
+18      ChesterArthur          4  ...        0.484502         0.086700
+41        DonaldTrump          2  ...        0.517801         0.085946
+3        JamesMadison          8  ...        0.465314         0.082921
+20   BenjaminHarrison          4  ...        0.470562         0.082566
+40        BarackObama          8  ...        0.506797         0.079209
+7      MartinVanBuren          4  ...        0.468527         0.075930
+19    GroverCleveland          8  ...        0.487346         0.075350
+2     ThomasJefferson          8  ...        0.461717         0.069485
+15      AndrewJohnson          4  ...        0.477294         0.069149
+14     AbrahamLincoln          4  ...        0.476551         0.067843
+12     FranklinPierce          4  ...        0.478947         0.062534
+22  TheodoreRoosevelt          8  ...        0.483795         0.061565
+9           JamesPolk          4  ...        0.465541         0.059818
+28  FranklinRoosevelt         12  ...        0.496682         0.051117
+27      HerbertHoover          4  ...        0.504247         0.048733
+13      JamesBuchanan          4  ...        0.474129         0.037012
+25      WarrenHarding          2  ...        0.502027         0.029138
+
+[42 rows x 8 columns]
+
+Printing sorted sentiment scores, TIME: 94.80305950000184
+                 prez  num_spchs  ...  word_substance  sentiment_score
+25      WarrenHarding          2  ...        0.502027         0.029138
+13      JamesBuchanan          4  ...        0.474129         0.037012
+27      HerbertHoover          4  ...        0.504247         0.048733
+28  FranklinRoosevelt         12  ...        0.496682         0.051117
+9           JamesPolk          4  ...        0.465541         0.059818
+22  TheodoreRoosevelt          8  ...        0.483795         0.061565
+12     FranklinPierce          4  ...        0.478947         0.062534
+14     AbrahamLincoln          4  ...        0.476551         0.067843
+15      AndrewJohnson          4  ...        0.477294         0.069149
+2     ThomasJefferson          8  ...        0.461717         0.069485
+19    GroverCleveland          8  ...        0.487346         0.075350
+7      MartinVanBuren          4  ...        0.468527         0.075930
+40        BarackObama          8  ...        0.506797         0.079209
+20   BenjaminHarrison          4  ...        0.470562         0.082566
+3        JamesMadison          8  ...        0.465314         0.082921
+41        DonaldTrump          2  ...        0.517801         0.085946
+18      ChesterArthur          4  ...        0.484502         0.086700
+39        GeorgeWBush          8  ...        0.526586         0.087130
+11    MillardFillmore          3  ...        0.465263         0.087458
+0    GeorgeWashington          6  ...        0.465166         0.089014
+16       UlyssesGrant          8  ...        0.474803         0.089062
+21    WilliamMcKinley          4  ...        0.494743         0.089860
+24      WoodrowWilson          8  ...        0.465776         0.090336
+34         GeraldFord          3  ...        0.521253         0.090922
+8           JohnTyler          4  ...        0.465795         0.091633
+6       AndrewJackson          8  ...        0.458431         0.091957
+38        BillClinton          8  ...        0.508722         0.092029
+23        WilliamTaft          4  ...        0.489842         0.094076
+29        HarryTruman          8  ...        0.512251         0.096958
+10      ZacharyTaylor          1  ...        0.465153         0.098476
+1           JohnAdams          4  ...        0.465025         0.098888
+32      LyndonJohnson          6  ...        0.489309         0.100170
+5     JohnQuincyAdams          4  ...        0.454136         0.103879
+31        JohnKennedy          2  ...        0.529592         0.104190
+17    RutherfordHayes          4  ...        0.480715         0.106351
+35        JimmyCarter          4  ...        0.551496         0.106896
+37       GeorgeHWBush          4  ...        0.501758         0.107389
+26     CalvinCoolidge          6  ...        0.489893         0.107954
+4         JamesMonroe          8  ...        0.448752         0.117811
+36       RonaldReagan          7  ...        0.518293         0.130153
+33       RichardNixon          5  ...        0.473096         0.132604
+30   DwightEisenhower          8  ...        0.546303         0.138124
+
+[42 rows x 8 columns]
+Creating n-grams, TIME: 97.4892744999961
+Creating 1-gram chart for president 1: GeorgeWashington...
+words are ['state', 'united', 'may', 'public', 'law', 'government', 'upon', 'citizen', 'nation', 'made', 'provision', 'peace', 'indian', 'country', 'shall', 'would', 'congress', 'object', 'time', 'war']
+freqs are [107, 80, 58, 44, 42, 42, 38, 36, 36, 32, 31, 27, 27, 27, 26, 26, 25, 24, 24, 24]
+
+c:\Users\jerem\OneDrive\Documents\School\_REGIS\2023-08_Fall\MSDS692\president_sotu_speech.py:526: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig12, ax12 = plt.subplots(figsize=(6,6))
+Creating 1-gram chart for president 42: DonaldTrump...
+words are ['american', 'america', 'year', 'country', 'one', 'people', 'new', 'tonight', 'nation', 'great', 'state', 'world', 'must', 'also', 'job', 'family', 'time', 'work', 'every', 'congress']      
+freqs are [103, 56, 48, 45, 44, 41, 40, 36, 30, 29, 28, 28, 26, 26, 25, 24, 23, 22, 22, 21]
+
+Done creating 1-grams by president, TIME: 114.36979440000141
+Creating 2-gram chart PER PRESIDENT, 1: GeorgeWashington...
+2grams are [('united', 'state'), ('house', 'representative'), ('senate', 'house'), ('public', 'debt'), ('gentleman', 'senate'), ('citizen', 'senate'), ('last', 'session'), ('gentleman', 'house'), ('service', 'ensuing'), ('ensuing', 'year'), ('great', 'britain'), ('fellow', 'citizen'), ('provision', 'made'), ('part', 'united'), ('washingtonfellow', 'citizen')]
+freqs are [80, 19, 12, 8, 7, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5]
+
+Creating 2-gram chart PER PRESIDENT, 42: DonaldTrump...
+2grams are [('united', 'state'), ('last', 'year'), ('american', 'people'), ('tax', 'cut'), ('immigration', 'system'), ('asking', 'congress'), ('every', 'american'), ('north', 'korea'), ('middle', 'class'), ('america', 'great'), ('billion', 'dollar'), ('new', 'american'), ('gang', 'member'), ('men', 'woman'), ('american', 'company')]
+freqs are [18, 11, 7, 6, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4]
+
+Done creating 2-grams by president, TIME: 130.2460443000018
+Creating 3-gram chart PER PRESIDENT 1: GeorgeWashington...
+3grams are [('senate', 'house', 'representative'), ('citizen', 'senate', 'house'), ('gentleman', 'house', 'representative'), ('service', 'ensuing', 'year'), ('gentleman', 'senate', 'house'), ('part', 'united', 'state'), ('washingtonfellow', 'citizen', 'senate'), ('bank', 'united', 'state'), ('power', 'united', 'state'), ('far', 'may', 'practicable'), ('government', 'united', 'state'), ('debt', 'united', 'state'), ('current', 'service', 'ensuing'), ('citizen', 'united', 'state'), ('within', 'united', 'state')]
+freqs are [12, 6, 6, 6, 6, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Creating 3-gram chart PER PRESIDENT 42: DonaldTrump...
+3grams are [('every', 'american', 'child'), ('speaker', 'vice', 'president'), ('vice', 'president', 'member'), ('president', 'member', 'congress'), ('member', 'congress', 'first'), ('congress', 'first', 'lady'), ('first', 'lady', 'united'), ('lady', 'united', 'state'), ('new', 'chapter', 'american'), ('chapter', 'american', 'greatness'), ('renewal', 'american', 'spirit'), ('make', 'america', 'great'), ('new', 'road', 'bridge'), ('billion', 'billion', 'dollar'), ('crime', 'ordered', 'department')]
+freqs are [3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+
+Done creating 3-grams by president, TIME: 148.14852980000433
+Creating 2-gram chart PER YEAR, 1: GeorgeWashington...
+2grams are [('united', 'state'), ('house', 'representative'), ('debt', 'united'), ('senate', 'house'), ('among', 'important'), ('treaty', 'provisionally'), ('provisionally', 'concluded'), ('well', 'disposed'), ('far', 'may'), ('may', 'practicable'), ('provision', 'made'), ('gentleman', 'senate'), ('important', 'object'), ('post', 'office'), ('office', 'post')]
+freqs are [17, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+
+Creating 2-gram chart PER YEAR, 227: DonaldTrump...
+2grams are [('last', 'year'), ('united', 'state'), ('tax', 'cut'), ('north', 'korea'), ('american', 'people'), ('small', 'business'), ('asking', 'congress'), ('come', 'together'), ('new', 'job'), ('american', 'worker'), ('want', 'every'), ('four', 'pillar'), ('immigration', 'system'), ('kenton', 'stacy'), ('le', 'year')]
+freqs are [8, 6, 6, 5, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 2]
+
+Done creating 2-grams by year, TIME: 238.18322159998934
+Creating 3-gram chart PER YEAR, 1: GeorgeWashington...
+3grams are [('debt', 'united', 'state'), ('senate', 'house', 'representative'), ('treaty', 'provisionally', 'concluded'), ('far', 'may', 'practicable'), ('post', 'office', 'post'), ('office', 'post', 'road'), ('provision', 'sale', 'vacant'), ('sale', 'vacant', 'land'), ('vacant', 'land', 'united'), ('land', 'united', 'state'), ('fellow', 'citizen', 'senate'), ('citizen', 'senate', 'house'), ('house', 'representative', 'vain'), ('representative', 'vain', 'may'), ('vain', 'may', 'expect')]        
+freqs are [3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1]
+
+Creating 3-gram chart PER YEAR, 227: DonaldTrump...
+3grams are [('safe', 'strong', 'proud'), ('massive', 'tax', 'cut'), ('american', 'worker', 'american'), ('tonight', 'calling', 'congress'), ('freedom', 'stand', 'tall'), ('speaker', 'vice', 'president'), ('vice', 'president', 'member'), ('president', 'member', 'congress'), ('member', 'congress', 'first'), ('congress', 'first', 'lady'), ('first', 'lady', 'united'), ('lady', 'united', 'state'), ('united', 'state', 'fellow'), ('state', 'fellow', 'american'), ('fellow', 'american', 'le')]
+freqs are [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+Done creating 3-grams by year, TIME: 332.6049345000065
+Average sentiment for year of presidency 1: 0.09391953403485734
+Average sentiment for year of presidency 2: 0.08838483870924382
+Average sentiment for year of presidency 3: 0.0867493108987939
+Average sentiment for year of presidency 4: 0.09317611576452477
+Average sentiment for year of presidency 5: 0.08818947941068099
+Average sentiment for year of presidency 6: 0.09901585524458645
+Average sentiment for year of presidency 7: 0.09126722838401082
+Average sentiment for year of presidency 8: 0.0923824507834433
+Average polarity, subjectivity for year of presidency 1: 0.11156630492108087, 0.4269202274183614
+Average polarity, subjectivity for year of presidency 2: 0.10700349087855988, 0.41983795098666543   
+Average polarity, subjectivity for year of presidency 3: 0.11103470566708966, 0.4242459780497945    
+Average polarity, subjectivity for year of presidency 4: 0.11823501388537955, 0.42617829163781357   
+Average polarity, subjectivity for year of presidency 5: 0.11279676911271908, 0.42885286021325153   
+Average polarity, subjectivity for year of presidency 6: 0.1244437644640575, 0.43143517724553154    
+Average polarity, subjectivity for year of presidency 7: 0.1142185631960925, 0.4214575499195886     
+Average polarity, subjectivity for year of presidency 8: 0.11095436448347097, 0.4248232095420715    
+
+DF_SPEECHES COLUMNS AND HEAD
+Index(['prez', 'year', 'text', 'year_of_prez', 'cleaned_text', 'word_count',
+       'cleaned_word_count'],
+      dtype='object')
+             prez  year  ... word_count  cleaned_word_count
+0  AbrahamLincoln  1861  ...       6976                3290
+1  AbrahamLincoln  1862  ...       8392                3991
+2  AbrahamLincoln  1863  ...       6111                2959
+3  AbrahamLincoln  1864  ...       5989                2849
+4   AndrewJackson  1829  ...      10523                4867
+
+[5 rows x 7 columns]
+
+DF_SPEECHES_SORTED COLUMNS AND HEAD
+Index(['prez', 'year', 'text', 'year_of_prez', 'cleaned_text', 'word_count',
+       'cleaned_word_count', 'word_substance', 'top_words', 'top_2grams',
+       'top_3grams', 'unique_words', 'sentiment_score', 'polarity',
+       'subjectivity'],
+      dtype='object')
+               prez  year  ...  polarity  subjectivity
+0  GeorgeWashington  1791  ...  0.122440      0.440963
+1  GeorgeWashington  1792  ...  0.062036      0.388452
+2  GeorgeWashington  1793  ...  0.049739      0.401527
+3  GeorgeWashington  1794  ...  0.131131      0.489593
+4  GeorgeWashington  1795  ...  0.120179      0.472985
+
+[5 rows x 15 columns]
+
+DF_PRESIDENT_SPEECHES COLUMNS AND HEAD
+Index(['prez', 'text', 'num_spchs', 'cleaned_text', 'word_count',
+       'cleaned_word_count', 'avg_word_per_speech',
+       'avg_cleaned_word_per_speech', 'word_substance', 'top_words',
+       'top_2grams', 'top_3grams', 'unique_words_total',
+       'unique_words_per_speech', 'sentiment_score', 'polarity',
+       'subjectivity'],
+      dtype='object')
+               prez                                               text  ...  polarity subjectivity
+0  GeorgeWashington  Fellow-Citizens of the Senate and House of Rep...  ...  0.105782     0.436542  
+1         JohnAdams  Gentlemen of the Senate and Gentlemen of the H...  ...  0.114269     0.444862  
+2   ThomasJefferson  Fellow Citizens of the Senate and House of Rep...  ...  0.106295     0.425449  
+3      JamesMadison  Fellow-Citizens of the Senate and House of Rep...  ...  0.093434     0.400001  
+4       JamesMonroe  Fellow-Citizens of the Senate and House of Rep...  ...  0.142254     0.422440  
+
+[5 rows x 17 columns]
+
+DONE, TOTAL TIME: 349.944668799988 seconds
+
+c:\Users\jerem\OneDrive\Documents\School\_REGIS\2023-08_Fall\MSDS692>

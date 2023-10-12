@@ -78,14 +78,13 @@ def read_files():
         print(file)
         name, extension = file.split(".")
         president, year = name.split("_")
-        print(president, year)
-        print()
+        print(f"{file} = {president}, {year}")
         
         # Add in the data from the text file to the 'speeches' list
         # 'speeches' will have all of the raw speeches, per year. 
         # later we'll consolidate them by president
         speeches.append({'prez': president, 'year': int(year), 'text': open(os.path.join(file_path, file)).read()})        
-        
+    print()
 
 # Create a function to read in the speeches and filter the stopwords
 # This function also removes punctuation and numerical characters
@@ -254,7 +253,7 @@ if __name__ == "__main__":
     # Create an example wordcloud for my title page :)
     fig, ax = plt.subplots(figsize=(6,4))
     cloudtex = ' '.join(cleaned_words)
-    wordcloud = WordCloud(width=600, height=400, font_path='C:\\Windows\\WinSxS\\amd64_microsoft-windows-font-truetype-verdana_31bf3856ad364e35_10.0.22621.1_none_200eeed3f2ec147f\\verdana.ttf').generate(cloudtex)
+    wordcloud = WordCloud(width=600, height=400, colormap='Blues', font_path='C:\\Windows\\WinSxS\\amd64_microsoft-windows-font-truetype-verdana_31bf3856ad364e35_10.0.22621.1_none_200eeed3f2ec147f\\verdana.ttf').generate(cloudtex)
     plt.imshow(wordcloud, interpolation='bilinear') 
     plt.axis("off")
     plt.tight_layout()
@@ -293,7 +292,7 @@ if __name__ == "__main__":
     fig, ax = plt.subplots(figsize=(6,4))
     filtered_df = df_president_speeches[df_president_speeches['prez'] == 'DonaldTrump']
     all_words = ' '.join([' '.join(words) for words in filtered_df['cleaned_text']])
-    wordcloud = WordCloud(width=600, height=400, font_path='C:\\Windows\\WinSxS\\amd64_microsoft-windows-font-truetype-verdana_31bf3856ad364e35_10.0.22621.1_none_200eeed3f2ec147f\\verdana.ttf').generate(all_words)
+    wordcloud = WordCloud(width=600, height=400, colormap='GnBu', font_path='C:\\Windows\\WinSxS\\amd64_microsoft-windows-font-truetype-verdana_31bf3856ad364e35_10.0.22621.1_none_200eeed3f2ec147f\\verdana.ttf').generate(all_words)
     plt.imshow(wordcloud, interpolation='bilinear') 
     plt.axis("off")
     plt.tight_layout()
@@ -302,7 +301,7 @@ if __name__ == "__main__":
     fig, ax = plt.subplots(figsize=(6,4))
     filtered_df = df_president_speeches[df_president_speeches['prez'] == 'GeorgeWashington']
     all_words = ' '.join([' '.join(words) for words in filtered_df['cleaned_text']])
-    wordcloud = WordCloud(width=600, height=400, font_path='C:\\Windows\\WinSxS\\amd64_microsoft-windows-font-truetype-verdana_31bf3856ad364e35_10.0.22621.1_none_200eeed3f2ec147f\\verdana.ttf').generate(all_words)
+    wordcloud = WordCloud(width=600, height=400, colormap='winter', font_path='C:\\Windows\\WinSxS\\amd64_microsoft-windows-font-truetype-verdana_31bf3856ad364e35_10.0.22621.1_none_200eeed3f2ec147f\\verdana.ttf').generate(all_words)
     plt.imshow(wordcloud, interpolation='bilinear') 
     plt.axis("off")
     plt.tight_layout()
@@ -325,7 +324,7 @@ if __name__ == "__main__":
     #print(df_test)
     #print('Done with test dataframe\n')
     
-    # Now let's do the same with the real dataframes!
+    # Now we'll calculate speech substance, a ratio of cleaned words to total words
     print()
     print(f'Creating word_count and cleaned_word_count columns in df_speeches and df_president_speeches, TIME: {timeit.default_timer() - start_time}')
     df_speeches['word_count'] = df_speeches['text'].apply(count_words)
@@ -455,7 +454,7 @@ if __name__ == "__main__":
     print()
     print(f'Created initial word count / word frequency figures, TIME: {timeit.default_timer() - start_time}')
     
-    ################################ SENTIMENT ANALYSIS ################################
+    ################################ SENTIMENT ANALYSIS , METHOD 1 ################################
     
     # NOW Let's start delving into sentiment analysis, using the sentiment_analysis function we created earlier
     df_president_speeches['sentiment_score'] = df_president_speeches['cleaned_text'].apply(sentiment_analysis)
@@ -521,14 +520,14 @@ if __name__ == "__main__":
     fig11.savefig(plot11_filename, dpi=dpi)
     
     ################################ N-GRAM PLOTTING ################################
-    
+    print(f"Creating n-grams, TIME: {timeit.default_timer() - start_time}")
     # Now I iterate through the list of all presidents and plot the most common 1-grams, 2-grams, and 3-grams
     for i in range(len(df_president_speeches)):
         fig12, ax12 = plt.subplots(figsize=(6,6))
         words_freq = df_president_speeches['top_words'][i]
         words = [word for word, freq in words_freq]
         freqs = [freq for word, freq in words_freq]
-        if (i == 0):
+        if (i == 0 or i == len(df_president_speeches) - 1):
             print(f"Creating 1-gram chart for president {i+1}: {df_president_speeches['prez'][i]}...")
             print(f"words are {words}")
             print(f"freqs are {freqs}")
@@ -540,6 +539,7 @@ if __name__ == "__main__":
         plot12_filename = f"output/Top-Words-by-President-{i+1}-{df_president_speeches['prez'][i]}.png"
         fig12.savefig(plot12_filename, dpi=dpi)
         
+    print(f"Done creating 1-grams by president, TIME: {timeit.default_timer() - start_time}")
     
     # let's plot the 2-grams by president!
     for i in range(len(df_president_speeches)):
@@ -547,7 +547,7 @@ if __name__ == "__main__":
         grams2_freq = df_president_speeches['top_2grams'][i]
         grams2 = [gram for gram, freq in grams2_freq]
         freqs = [freq for word, freq in grams2_freq]
-        if (i == 0):
+        if (i == 0 or i == len(df_president_speeches) - 1):
             print(f"Creating 2-gram chart PER PRESIDENT, {i+1}: {df_president_speeches['prez'][i]}...")
             print(f"2grams are {grams2}")
             print(f"freqs are {freqs}")
@@ -561,6 +561,7 @@ if __name__ == "__main__":
         plot13_filename = f"output/Top-2Grams-by-President-{i+1}-{df_president_speeches['prez'][i]}.png"
         fig13.savefig(plot13_filename, dpi=dpi)
         
+    print(f"Done creating 2-grams by president, TIME: {timeit.default_timer() - start_time}")    
 
     # let's plot the 3-grams by president!
     for i in range(len(df_president_speeches)):
@@ -568,7 +569,7 @@ if __name__ == "__main__":
         grams3_freq = df_president_speeches['top_3grams'][i]
         grams3 = [gram for gram, freq in grams3_freq]
         freqs = [freq for word, freq in grams3_freq]
-        if (i == 0):
+        if (i == 0 or i == len(df_president_speeches) - 1):
             print(f"Creating 3-gram chart PER PRESIDENT {i+1}: {df_president_speeches['prez'][i]}...")
             print(f"3grams are {grams3}")
             print(f"freqs are {freqs}")
@@ -582,6 +583,7 @@ if __name__ == "__main__":
         plot14_filename = f"output/Top-3Grams-by-President-{i+1}-{df_president_speeches['prez'][i]}.png"
         fig14.savefig(plot14_filename, dpi=dpi)
         
+    print(f"Done creating 3-grams by president, TIME: {timeit.default_timer() - start_time}")    
     
     # let's plot the 2-grams by year!
     for i in range(len(df_speeches_sorted)):
@@ -589,7 +591,7 @@ if __name__ == "__main__":
         grams2_freq = df_speeches_sorted['top_2grams'][i]
         grams2 = [gram for gram, freq in grams2_freq]
         freqs = [freq for word, freq in grams2_freq]
-        if (i == 0):
+        if (i == 0 or i == len(df_speeches_sorted) - 1):
             print(f"Creating 2-gram chart PER YEAR, {i+1}: {df_speeches_sorted['prez'][i]}...")
             print(f"2grams are {grams2}")
             print(f"freqs are {freqs}")
@@ -603,6 +605,7 @@ if __name__ == "__main__":
         plot15_filename = f"output/Top-2Grams-by-Year-{df_speeches_sorted['year'][i]}-{df_speeches_sorted['prez'][i]}.png"
         fig15.savefig(plot15_filename, dpi=dpi)
         
+    print(f"Done creating 2-grams by year, TIME: {timeit.default_timer() - start_time}")    
     
     # let's plot the 3-grams by year!
     for i in range(len(df_speeches_sorted)):
@@ -610,7 +613,7 @@ if __name__ == "__main__":
         grams3_freq = df_speeches_sorted['top_3grams'][i]
         grams3 = [gram for gram, freq in grams3_freq]
         freqs = [freq for word, freq in grams3_freq]
-        if (i == 0):
+        if (i == 0 or i == len(df_speeches_sorted) - 1):
             print(f"Creating 3-gram chart PER YEAR, {i+1}: {df_speeches_sorted['prez'][i]}...")
             print(f"3grams are {grams3}")
             print(f"freqs are {freqs}")
@@ -624,8 +627,9 @@ if __name__ == "__main__":
         plot16_filename = f"output/Top-3Grams-by-Year-{df_speeches_sorted['year'][i]}-{df_speeches_sorted['prez'][i]}.png"
         fig16.savefig(plot16_filename, dpi=dpi)
         
+    print(f"Done creating 3-grams by year, TIME: {timeit.default_timer() - start_time}")    
     
-    ################################ UNIQUE WORD PLOTTING ################################
+    ################################ UNIQUE WORD (VOCABULARY), MORE SENTIMENT PLOTTING ################################
     
     # plot the number of unique words per president, found ealier
     fig17, ax17 = plt.subplots(figsize=(6,6))
@@ -682,6 +686,7 @@ if __name__ == "__main__":
     min_yop = df_speeches_sorted['year_of_prez'].min()
     yop_values = []
     avg_sentiment_values = []
+    # first I need to collect the average sentiment for each year of presidency
     for i in range(min_yop,9): #max_yop+1):
         avg_sentiment = df_speeches_sorted[df_speeches_sorted['year_of_prez'] == i]['sentiment_score'].mean()   
         print(f"Average sentiment for year of presidency {i}: {avg_sentiment}")
@@ -695,6 +700,8 @@ if __name__ == "__main__":
     plt.tight_layout()
     plot22_filename = 'output/Avg-Sentiment-by-Year-of-Presidency.png'
     fig22.savefig(plot22_filename, dpi=dpi)
+    
+    ################################ SENTIMENT ANALYSIS , METHOD 2 ################################
     
     # I want to also find the sentiment a 2nd method, using the TextBlob library. My first approach was underwhelming
     df_speeches_sorted[['polarity', 'subjectivity']] = df_speeches_sorted['cleaned_text'].apply(lambda x: pd.Series(get_sentiment(' '.join(x))))
@@ -768,6 +775,7 @@ if __name__ == "__main__":
     plot30_filename = 'output/Subjectivity-by-President-SORTED.png'
     fig30.savefig(plot30_filename, dpi=dpi)
     
+    # Now I perform more amalgamation by year of presidency, to see if polarity or subjectivity give us better results
     yop_values2 = []
     avg_polarity_values = []
     avg_subjectivity_values = []
@@ -795,6 +803,7 @@ if __name__ == "__main__":
     plot32_filename = 'output/Avg-Subjectivity-by-Year-of-Presidency.png'
     fig32.savefig(plot32_filename, dpi=dpi)
     
+    # A final printout before we say goodbye :)
     print()
     print('DF_SPEECHES COLUMNS AND HEAD')
     print(df_speeches.columns)

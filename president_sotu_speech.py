@@ -524,30 +524,34 @@ if __name__ == "__main__":
     
     # Now I iterate through the list of all presidents and plot the most common 1-grams, 2-grams, and 3-grams
     for i in range(len(df_president_speeches)):
-        print(f"Creating 1-gram chart for president {i+1}: {df_president_speeches['prez'][i]}...")
         fig12, ax12 = plt.subplots(figsize=(6,6))
         words_freq = df_president_speeches['top_words'][i]
         words = [word for word, freq in words_freq]
         freqs = [freq for word, freq in words_freq]
-        print(f"words are {words}")
-        print(f"freqs are {freqs}")
+        if (i == 0):
+            print(f"Creating 1-gram chart for president {i+1}: {df_president_speeches['prez'][i]}...")
+            print(f"words are {words}")
+            print(f"freqs are {freqs}")
+            print()
         ax12.barh(words, freqs, color='tab:blue')
         ylab=f"Top Words by President {df_president_speeches['prez'][i]}"
         ax12.set(xlabel='Mentions', ylabel=ylab, title=ylab)
         plt.tight_layout()
         plot12_filename = f"output/Top-Words-by-President-{i+1}-{df_president_speeches['prez'][i]}.png"
         fig12.savefig(plot12_filename, dpi=dpi)
-        print()
+        
     
     # let's plot the 2-grams by president!
     for i in range(len(df_president_speeches)):
-        print(f"Creating 2-gram chart PER PRESIDENT, {i+1}: {df_president_speeches['prez'][i]}...")
         fig13, ax13 = plt.subplots(figsize=(6,6))
         grams2_freq = df_president_speeches['top_2grams'][i]
         grams2 = [gram for gram, freq in grams2_freq]
         freqs = [freq for word, freq in grams2_freq]
-        print(f"2grams are {grams2}")
-        print(f"freqs are {freqs}")
+        if (i == 0):
+            print(f"Creating 2-gram chart PER PRESIDENT, {i+1}: {df_president_speeches['prez'][i]}...")
+            print(f"2grams are {grams2}")
+            print(f"freqs are {freqs}")
+            print()
         for j in range(len(grams2)):
             grams2[j] = ' '.join(grams2[j])
         ax13.barh(grams2, freqs, color='tab:blue')
@@ -556,17 +560,19 @@ if __name__ == "__main__":
         plt.tight_layout()
         plot13_filename = f"output/Top-2Grams-by-President-{i+1}-{df_president_speeches['prez'][i]}.png"
         fig13.savefig(plot13_filename, dpi=dpi)
-        print()
+        
 
     # let's plot the 3-grams by president!
     for i in range(len(df_president_speeches)):
-        print(f"Creating 3-gram chart PER PRESIDENT {i+1}: {df_president_speeches['prez'][i]}...")
         fig14, ax14 = plt.subplots(figsize=(7,6))
         grams3_freq = df_president_speeches['top_3grams'][i]
         grams3 = [gram for gram, freq in grams3_freq]
         freqs = [freq for word, freq in grams3_freq]
-        print(f"3grams are {grams3}")
-        print(f"freqs are {freqs}")
+        if (i == 0):
+            print(f"Creating 3-gram chart PER PRESIDENT {i+1}: {df_president_speeches['prez'][i]}...")
+            print(f"3grams are {grams3}")
+            print(f"freqs are {freqs}")
+            print()
         for j in range(len(grams2)):
             grams3[j] = ' '.join(grams3[j])
         ax14.barh(grams3, freqs, color='tab:blue')
@@ -575,17 +581,19 @@ if __name__ == "__main__":
         plt.tight_layout()
         plot14_filename = f"output/Top-3Grams-by-President-{i+1}-{df_president_speeches['prez'][i]}.png"
         fig14.savefig(plot14_filename, dpi=dpi)
-        print()    
+        
     
     # let's plot the 2-grams by year!
     for i in range(len(df_speeches_sorted)):
-        print(f"Creating 2-gram chart PER YEAR, {i+1}: {df_speeches_sorted['prez'][i]}...")
         fig15, ax15 = plt.subplots(figsize=(6,6))
         grams2_freq = df_speeches_sorted['top_2grams'][i]
         grams2 = [gram for gram, freq in grams2_freq]
         freqs = [freq for word, freq in grams2_freq]
-        print(f"2grams are {grams2}")
-        print(f"freqs are {freqs}")
+        if (i == 0):
+            print(f"Creating 2-gram chart PER YEAR, {i+1}: {df_speeches_sorted['prez'][i]}...")
+            print(f"2grams are {grams2}")
+            print(f"freqs are {freqs}")
+            print()
         for j in range(len(grams2)):
             grams2[j] = ' '.join(grams2[j])
         ax15.barh(grams2, freqs, color='tab:blue')
@@ -594,17 +602,19 @@ if __name__ == "__main__":
         plt.tight_layout()
         plot15_filename = f"output/Top-2Grams-by-Year-{df_speeches_sorted['year'][i]}-{df_speeches_sorted['prez'][i]}.png"
         fig15.savefig(plot15_filename, dpi=dpi)
-        print()
+        
     
     # let's plot the 3-grams by year!
     for i in range(len(df_speeches_sorted)):
-        print(f"Creating 3-gram chart PER YEAR, {i+1}: {df_speeches_sorted['prez'][i]}...")
         fig16, ax16 = plt.subplots(figsize=(7,6))
         grams3_freq = df_speeches_sorted['top_3grams'][i]
         grams3 = [gram for gram, freq in grams3_freq]
         freqs = [freq for word, freq in grams3_freq]
-        print(f"3grams are {grams3}")
-        print(f"freqs are {freqs}")
+        if (i == 0):
+            print(f"Creating 3-gram chart PER YEAR, {i+1}: {df_speeches_sorted['prez'][i]}...")
+            print(f"3grams are {grams3}")
+            print(f"freqs are {freqs}")
+            print()
         for j in range(len(grams2)):
             grams3[j] = ' '.join(grams3[j])
         ax16.barh(grams3, freqs, color='tab:blue')
@@ -613,7 +623,7 @@ if __name__ == "__main__":
         plt.tight_layout()
         plot16_filename = f"output/Top-3Grams-by-Year-{df_speeches_sorted['year'][i]}-{df_speeches_sorted['prez'][i]}.png"
         fig16.savefig(plot16_filename, dpi=dpi)
-        print()    
+        
     
     ################################ UNIQUE WORD PLOTTING ################################
     
@@ -638,7 +648,7 @@ if __name__ == "__main__":
     fig18, ax18 = plt.subplots(figsize=(6,6))
     df_sorted_unique_words = df_president_speeches.sort_values(by='unique_words_per_speech', ascending=True)
     ax18.barh(df_sorted_unique_words['prez'], df_sorted_unique_words['unique_words_per_speech'], color='tab:blue')
-    ax18.set(xlabel='Unique Words by President', ylabel='President', title='Unique Words by President (Sorted)')
+    ax18.set(xlabel='Unique Words by President', ylabel='President', title='Vocabulary (# Unique Words) by President')
     ax18.tick_params(axis='y', labelsize=8)
     plt.tight_layout()
     plot18_filename = 'output/Unique-Words-by-President-SORTED.png'

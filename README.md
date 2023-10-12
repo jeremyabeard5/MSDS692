@@ -14,6 +14,14 @@ Jeremy Beard
 
 [Methods](#methods)
 
+[Results](#results)
+
+[Conclusions](#conclusions)
+
+[Future Work](#future)
+
+[References](#references)
+
 
 <a name="mainideas"/>
 
@@ -52,6 +60,8 @@ These questions will be answered through the analysis that is conducted which in
 - Consolidate speeches by president for per-president analyses
 
 
+<a name="results"/>
+
 ## Results
 
 For my results, I created a LOT of charts. I answered a LOT of questions. I definitely answered all the questions I set out to answer and more. All in all, I created about 611 charts throughout my scripting. Let's say that again. 611 CHARTS. 
@@ -79,11 +89,16 @@ Aside from the common 1/2/3-word phrases, I performed sentiment analysis using t
 ![Polarity by Year](output/Polarity-by-Year-CHRONO.png)
 
 
+<a name="conclusions"/>
+
 ## Conclusions
 
 All in all, it seems like there really isn't a great correlation for presidential sentiment. However, year 6 seemed to be the golden time for a president as the sentiment and polarity both spiked upwards during those years while remaining relatively consistent during the other years. Year 6 appears to be a bit of a "victory lap" in the president's State of the Union address, noticeably more positive than the other years.
 
 With regard to other measures like word count, common n-grams, speech substance, and more, it was really interesting to see each presidents' focus areas. 
+
+
+<a name="future"/>
 
 ## Future Work
 
@@ -101,6 +116,9 @@ In the future, I'd like to improve upon all of these items. For my next capstone
 - I want to make sure specific business questions are being addressed. This current project is more exploratory and was undergone out of historical significance
 
 Given all this, I have a lot to take forward for the future. This project was fun and interesting, but a lot could be improved upon in the next iteration. 
+
+
+<a name="references"/>
 
 ## References
 The dataset I used was located at: 

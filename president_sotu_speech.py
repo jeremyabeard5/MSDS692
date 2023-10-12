@@ -627,7 +627,7 @@ if __name__ == "__main__":
     
     fig17, ax17 = plt.subplots(figsize=(6,6))
     ax17.plot(df_speeches_sorted['year'], df_speeches_sorted['unique_words'], color='tab:blue')
-    ax17.set(xlabel='Year', ylabel='# Unique Words', title='Avg. Unique Words by President (Chronological)')
+    ax17.set(xlabel='Year', ylabel='# Unique Words', title='Vocabulary (# Unique Words) by Year')
     #ax17.tick_params(axis='y', labelsize=8)
     plt.tight_layout()
     plot17_filename = 'output/Unique-Words-by-Year-CHRONO.png'

@@ -52,30 +52,44 @@ For my analysis, I analyzed the most frequent 1-word, 2-word, and 3-word phrases
 
 Aside from the common 1/2/3-word phrases, I performed sentiment analysis using two different methods: one, using a text file of sentiment keys I gained during my studies at Regis University, and another, using the TextBlob python package. Some important charts are as follows:
 
+# Measuring Vocabulary / Amount of Unique Words per Speech
+
+![Vocabulary by President](output/Unique-Words-by-President-SORTED.png)
+
+![Vocabulary by Year](output/Unique-Words-by-Year-CHRONO.png)
+
+# Sentiment / Polarity / Subjectivity Measures
 
 ![Sentiment by Year of Presidency](output/Avg-Sentiment-by-Year-of-Presidency.png)
 
 ![Sentiment by Year of Presidency](output/Avg-Polarity-by-Year-of-Presidency.png)
 
+![Polarity by President](output/Polarity-by-President-SORTED.png)
+
+![Subjectivity by President](output/Subjectivity-by-President-SORTED.png)
+
+![Polarity by Year](output/Polarity-by-Year-CHRONO.png)
+
 
 ## Conclusions
 
-All in all, it seems like there really isn't a great correlation for presidential sentiment. Year 6 seemed to be the golden time for a president as the sentiment and polarity both spiked upwards during those years while remaining relatively consistent during the other years. 
+All in all, it seems like there really isn't a great correlation for presidential sentiment. However, year 6 seemed to be the golden time for a president as the sentiment and polarity both spiked upwards during those years while remaining relatively consistent during the other years. Year 6 appears to be a bit of a "victory lap" in the president's State of the Union address, noticeably more positive than the other years.
+
+With regard to other measures like word count, common n-grams, speech substance, and more, it was really interesting to see each presidents' focus areas. 
 
 ## Future Work
 
-This project was a huge learning experience for me and really it gave me a lot of ideas for the next capstone course I be attending! I realized some pitfalls pretty quickly near the end of the project that I want to improve upon in the next capstone. I also realized some pitfalls in this project itself that could be improved upon!
+This project was a huge learning experience for me and really it gave me a lot of ideas for the next capstone course I be attending! I realized some pitfalls pretty quickly near the end of the project that I want to improve upon in the next capstone. I started to even think the dataset I was using wasn't great for text analytics within a political lens. What I mean is, the State of the Union address is often a formal and well-regulated speech. The differences in speech between different presidents are probably not as noticeable in the State of the Union due to its traditional and formal nature. In the future, I would love to source a different, more informal source of presidential speech. In addition to that, the other pitfalls I noticed can be found below. 
 
 I realized that my current project:
 
-- Doesn't involve much machine learning 
+- Doesn't involve a significant amount of machine learning 
 - Is not too interactive
 - Doesn't have a great business case
 
 In the future, I'd like to improve upon all of these items. For my next capstone, I'm planning on making sure the following components are included in the project:
 
 - I want to work with NUMERICAL data, after all the text analysis here
-- I want to involve a machine learning model component. I want to make sure SOMETHING is being predicted in my next project
 - I want to make sure specific business questions are being addressed. This current project is more exploratory and was undergone out of historical significance
 
 Given all this, I have a lot to take forward for the future. This project was fun and interesting, but a lot could be improved upon in the next iteration. 

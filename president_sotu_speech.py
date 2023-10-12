@@ -625,6 +625,14 @@ if __name__ == "__main__":
     plot17_filename = 'output/Unique-Words-by-President-CHRONO.png'
     fig17.savefig(plot17_filename, dpi=dpi)
     
+    fig17, ax17 = plt.subplots(figsize=(6,6))
+    ax17.plot(df_speeches_sorted['year'], df_speeches_sorted['unique_words'], color='tab:blue')
+    ax17.set(xlabel='Year', ylabel='# Unique Words', title='Avg. Unique Words by President (Chronological)')
+    #ax17.tick_params(axis='y', labelsize=8)
+    plt.tight_layout()
+    plot17_filename = 'output/Unique-Words-by-Year-CHRONO.png'
+    fig17.savefig(plot17_filename, dpi=dpi)
+    
     # plot the number of unique words per president, SORTED
     fig18, ax18 = plt.subplots(figsize=(6,6))
     df_sorted_unique_words = df_president_speeches.sort_values(by='unique_words_per_speech', ascending=False)
@@ -744,6 +752,7 @@ if __name__ == "__main__":
     df_president_speeches_subjectivity = df_president_speeches.sort_values(by='subjectivity', ascending=False)
     ax30.plot(df_president_speeches_subjectivity['subjectivity'], df_president_speeches_subjectivity['prez'], color='tab:blue')
     ax30.set(xlabel='Subjectivity', ylabel='President', title='Subjectivity by President')
+    ax30.tick_params(axis='y', labelsize=8)
     plt.tight_layout()
     plot30_filename = 'output/Subjectivity-by-President-SORTED.png'
     fig30.savefig(plot30_filename, dpi=dpi)

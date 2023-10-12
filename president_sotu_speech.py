@@ -157,9 +157,9 @@ def find_grams(gram_num, tex):
     bigrams = []
     trigrams = []
     if gram_num == 2:
-        return nltk.FreqDist(nltk.bigrams(tex)).most_common(top_grams_count)
+        return nltk.FreqDist(nltk.bigrams(tex)).most_common(top_grams_count)#.reverse()
     elif gram_num == 3:
-        return nltk.FreqDist(nltk.trigrams(tex)).most_common(top_grams_count)
+        return nltk.FreqDist(nltk.trigrams(tex)).most_common(top_grams_count)#.reverse()
     else:
         return None        
 

@@ -114,6 +114,8 @@ My main analytical focus was that of sentiment analysis for this project. There 
 
 ## 1-gram / 2-gram / 3-gram Charts of Interest
 
+I found that the 2-gram charts were really the "sweet spot" in terms of useful information. 1-gram charts (or, the common word charts) didn't really give much information, and 3-gram charts were more general and less specific than the 2-gram charts. I included a few of the 2-gram and 3-gram charts below. For a complete list of all the 1-gram/2-gram/3-gram charts, please see the 'output' folder of my project. 
+
 ![Washington 2-gram](output/Top-2Grams-by-President-1-GeorgeWashington.png)
 
 ![Lincoln 2-gram](output/Top-2Grams-by-President-15-AbrahamLincoln.png)
@@ -192,6 +194,7 @@ In the future, I'd like to improve upon all of these items. For my next capstone
 Given all this, I have a lot to take forward for the future. This project was fun and interesting, but a lot could be improved upon in the next iteration.
 
 Thank you!
+
 Jeremy Beard 
 
 

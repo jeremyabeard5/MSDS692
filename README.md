@@ -1,4 +1,5 @@
 ![Presidential Wordcloud](output/example_wordcloud.png)
+(don't worry, this is my only wordcloud!)
 
 # MSDS692
 Presidential Sentiment Analysis
@@ -36,6 +37,8 @@ And more! There was a lot to do. I referenced my old homework assignments heavil
 
 These questions will be answered through the analysis that is conducted which involves the following:
 
+- Make everything lowercase (of course)
+- Remove all symbols and characters from the speech
 - Remove stopwords from each speech
 - Perform lemmatization on each speech
 - Consolidate speeches by president for per-president analyses
@@ -45,7 +48,17 @@ These questions will be answered through the analysis that is conducted which in
 
 For my results, I created a LOT of charts. I answered a LOT of questions. I definitely answered all the questions I set out to answer and more. All in all, I created about 611 charts throughout my scripting. Let's say that again. 611 CHARTS. 
 
+For my analysis, I analyzed the most frequent 1-word, 2-word, and 3-word phrases uttered by each president, as well as during each individual year. This alone resulted in 580 of the 611 charts, about 95%. This gave insight into what each individual president was addressing in their speech at the time, as well as the overall subjects addressed during each president's cumulative speeches. 
+
+Aside from the common 1/2/3-word phrases, I performed sentiment analysis using two different methods: one, using a text file of sentiment keys I gained during my studies at Regis University, and another, using the TextBlob python package. Some important charts are as follows:
+
+
+
+
+
 ## Conclusions
+
+All in all, it seems like there really isn't a great correlation for presidential sentiment. Year 6 seemed to be the golden time for a president as the sentiment and polarity both spiked upwards during those years while remaining relatively consistent during the other years. 
 
 ## Future Work
 

@@ -9,11 +9,14 @@ by
 Jeremy Beard
 
 ## Table of Contents
+
 [Main Ideas](#mainideas)
+
 [Methods](#methods)
 
 
 <a name="mainideas"/>
+
 ## Main Ideas
 This project is centered around a dataset which contains speeches from the State of the Union of all presidents since George Washington! 
 
@@ -22,6 +25,7 @@ The project will utilize a variety of natural language processing techniques in 
 
 
 <a name="methods"/>
+
 ## Methods
 
 This project will seek to explore the State of the Union of each of the presidents! To get started, I wanted to formulate a list of questions that would guide me throughout my work on this State of the Union dataset. After some thinking, I main questions I set out to answer were:

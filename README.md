@@ -2,7 +2,8 @@
 (don't worry, this is my only wordcloud!)
 
 # MSDS692
-Presidential Sentiment Analysis
+
+**Presidential Sentiment Analysis**
 
 by
 
@@ -48,16 +49,19 @@ This project will seek to explore the State of the Union of each of the presiden
 - Which presidents used the most unique words?
 - Which presidents used the least unique words?
 
-And more! There was a lot to do. I referenced my old homework assignments heavily as well as found some new methods of analysis. In the past, I had used a specific text file for sentiment analysis. This text file was the key for each word's sentiment value. I utilized this method during my analysis. I ALSO utilized the TextBlob package and performed sentiment analysis this way. TextBlob was a new package for me and took some configuring, but ended up providing "polarity" and "subjectivity" scores that were extremely useful to add to my analysis.
+And more! There was a lot to do. I referenced my old homework assignments heavily as well as found some new methods of analysis. In the past, I had used a specific text file for sentiment analysis. This text file was the key for each word's sentiment value and was used to map the words to their sentiment values. I utilized this method during my analysis. I ALSO utilized the TextBlob package and performed sentiment analysis this way. TextBlob was a new package for me and took some configuring, but ended up providing "polarity" and "subjectivity" scores that were extremely useful to add to my analysis.
 
+'Sentiment' was gained from the text file key, mentioned in the paragraph above. It gives a measure, from -1.0 to +1.0, of each section of text. 'Polarity' was gained from the TextBlob package and also provided a similar measure, a measure from -1.0 to +1.0 of the positivity of a block of text. 'Subjectivity' was provided from the TextBlob package and was a measure from 0.0 to 1.0 of the block of text's level of opinion vs. factual speech. Subjectivity was included in the charts for analysis but was not focused on. 
 
-These questions will be answered through the analysis that is conducted which involves the following:
+Anyway, the questions mentioned above helped to focus my analysis and provide for a roadmap. Following that, I did a lot of data cleaning and organization which involved the following:
 
 - Make everything lowercase (of course)
 - Remove all symbols and characters from the speech
 - Remove stopwords from each speech
 - Perform lemmatization on each speech
 - Consolidate speeches by president for per-president analyses
+
+This data cleaning worked out really well. I ended up with two main dataframes in my script: one which was organized by year and by speech, and another which was organized by president and contained all the text of the specific president. Let's move on to see the results!
 
 
 <a name="results"/>
@@ -72,11 +76,15 @@ Aside from the common 1/2/3-word phrases, I performed sentiment analysis using t
 
 # Measuring Vocabulary / Amount of Unique Words per Speech
 
+I wanted to see which presidents used more of a variety of words. The two charts below serve to show the amount of unique words used by each president, or by each year. From the charts below, it looks like the early presidents did **not** use a lot of unique words. Reagan, Obama, W. Bush, and Clinton also did not use a lot of different words in their speeches, compared to others.
+
 ![Vocabulary by President](output/Unique-Words-by-President-SORTED.png)
 
 ![Vocabulary by Year](output/Unique-Words-by-Year-CHRONO.png)
 
 # Sentiment / Polarity / Subjectivity Measures
+
+My main analytical focus was that of sentiment analysis for this project. There is not much business case for analyzing a dataset containing State of the Union speeches, but there can still be a whole lot of information gained from analysis on it! I utilized 'sentiment' as well as 'polarity' and 'subjectivity' to analyze the feeling of each speech. Explanations of each of these measures can be found in the 'Methods' section above but below are a few charts which give some insight into the sentiment, polarity, and subjectivity, of each president throughout the years. 
 
 ![Sentiment by Year of Presidency](output/Avg-Sentiment-by-Year-of-Presidency.png)
 

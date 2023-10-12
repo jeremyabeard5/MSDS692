@@ -390,6 +390,7 @@ if __name__ == "__main__":
     fig0, ax0 = plt.subplots(figsize=(6,6))
     ax0.barh(df_president_speeches['prez'], df_president_speeches['avg_word_per_speech'], color='tab:blue')
     ax0.set(xlabel='Avg. Words per Speech', ylabel='President', title='Avg. Words per Speech by President')
+    ax0.tick_params(axis='y', labelsize=8)
     plt.tight_layout()
     plot0_filename = 'output/Word-Count-by-President-CHRONO.png'
     fig0.savefig(plot0_filename, dpi=dpi)
@@ -422,8 +423,8 @@ if __name__ == "__main__":
     fig3.savefig(plot3_filename, dpi=dpi)
     
     fig4, ax4 = plt.subplots(figsize=(6,6))
-    ax4.barh(df_speeches_sorted['year'], df_speeches_sorted['cleaned_word_count'], color='tab:blue')
-    ax4.set(xlabel='Word Count', ylabel='Year', title='Word Count by Year')
+    ax4.plot(df_speeches_sorted['year'], df_speeches_sorted['cleaned_word_count'], color='tab:blue')
+    ax4.set(xlabel='Year', ylabel='Word Count', title='Word Count by Year')
     plt.tight_layout()
     plot4_filename = 'output/Word-Count-by-Year-CHRONO.png'
     fig4.savefig(plot4_filename, dpi=dpi)

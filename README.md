@@ -74,6 +74,18 @@ For my analysis, I analyzed the most frequent 1-word, 2-word, and 3-word phrases
 
 Aside from the common 1/2/3-word phrases, I performed sentiment analysis using two different methods: one, using a text file of sentiment keys I gained during my studies at Regis University, and another, using the TextBlob python package. Some important charts are as follows:
 
+# Measuring Word Count 
+
+![Word Count by President](output/Word-Count-by-President-SORTED.png)
+
+![Word Count by Year](output/Word-Count-by-Year-CHRONO.png)
+
+# Measuring Speech Substance
+
+I measured speech "substance" by taking a ratio of the word count AFTER cleaning / the word count BEFORE cleaning. Since cleaning removes the stopwords and filler material, this ratio will give a good measure of how much "fluff" was in the president's speech. 
+
+![Speech Substance by President](output/Speech-Substance-by-President-SORTED.png)
+
 # Measuring Vocabulary / Amount of Unique Words per Speech
 
 I wanted to see which presidents used more of a variety of words. The two charts below serve to show the amount of unique words used by each president, or by each year. From the charts below, it looks like the early presidents did **not** use a lot of unique words. Reagan, Obama, W. Bush, and Clinton also did not use a lot of different words in their speeches, compared to others.
@@ -94,6 +106,8 @@ My main analytical focus was that of sentiment analysis for this project. There 
 
 ![Subjectivity by President](output/Subjectivity-by-President-SORTED.png)
 
+![Sentiment by Year](output/Line-Sentiment-by-Year-CHRONO.png)
+
 ![Polarity by Year](output/Polarity-by-Year-CHRONO.png)
 
 
@@ -103,8 +117,45 @@ My main analytical focus was that of sentiment analysis for this project. There 
 
 All in all, it seems like there really isn't a great correlation for presidential sentiment. However, year 6 seemed to be the golden time for a president as the sentiment and polarity both spiked upwards during those years while remaining relatively consistent during the other years. Year 6 appears to be a bit of a "victory lap" in the president's State of the Union address, noticeably more positive than the other years.
 
-With regard to other measures like word count, common n-grams, speech substance, and more, it was really interesting to see each presidents' focus areas. 
+With regard to other measures like word count, common n-grams, speech substance, and more, it was really interesting to see each presidents' focus areas. The final answers to my questions were:
 
+- What is the quantitative positive/negative sentiment between all the speeches?
+
+It seemed like the speeches were generally on the positive side, with sentiment and polarity scores above 0 most of the time. The lowest level of sentiment/polarity was around the period of World War II, around 1940-45. Following that period, there was a noticeable uptick in sentiment/polarity until the late 90's. 
+
+- What is the quantitative positive/negative sentiment between all the presidents?
+
+The sentiment can be shown in the 'Polarity by President' chart. It seems like Richard Nixon on average is the most positively speaking president! George W. Bush was the most recent president whose sentiment was more positive than most. Barack Obama was the most recent president whose sentiment was more negative than most. It also seemed like, on average, recent Republican presidents were shown to have a more positive sentiment than recent Democratic presidents. Presidents like Donald Trump, George W. Bush, Ronald Reagan, and Richard Nixon all had higher sentiment and polarity scores than presidents like Barack Obama and Bill Clinton.
+
+- Which presidents use the widest variety of words?
+
+It seemed like, on average, Zachary Taylor, William McKinley, William Howard Taft, Millard Fillmore, James Polk, and John F Kennedy had the highest variety of words among the presidents.
+
+It also seemed like the early presidents had the lowest number of unique words. Presidents like Washington, John Adams, Thomas Jefferson, and James Madison all scored the lowest on the measure of vocabulary. 
+
+- What are the themes or buzzwords among the different speeches / presidents?
+
+The 2-gram and 3-gram charts can be investigated to see the different themes or buzzwords among the different speeches and presidents. It is interesting to browse through all of them! For example, George W Bush's 2-gram chart shows popular mentions like "middle east", "saddam hussein", "war terror", and "weapon mass", showing how important the War on Terror was to his presidency. Franklin Roosevelt presided over the nation during World War II and his 2-gram chart definitely reflects this, showing terms like "armed force", "world war", and "united nation". 
+
+- What were the most common words used in each speech?
+
+Similar answer as above :) the 1-word, 2-gram, and 3-gram charts all show the most common words and phrases used during each of the speeches. 
+
+- Which presidents gave the longest speeches?
+
+
+
+- Which presidents gave the shortest speeches?
+
+
+
+- Which presidents used the most unique words?
+
+Similar answer to the vocabulary / variety of word measure, shown above.
+
+- Which presidents used the least unique words?
+
+Similar answer to the vocabulary / variety of word measure, shown above.
 
 <a name="future"/>
 

@@ -37,7 +37,7 @@ The project will utilize a variety of natural language processing techniques in 
 
 # Methods
 
-This project will seek to explore the State of the Union of each of the presidents! To get started, I wanted to formulate a list of questions that would guide me throughout my work on this State of the Union dataset. After some thinking, I main questions I set out to answer were:
+This project will seek to explore the State of the Union of each of the presidents! To get started, I wanted to formulate a list of questions that would guide me throughout my work on this State of the Union dataset. After some thinking, the main questions I set out to answer were:
 
 - What is the quantitative positive/negative sentiment between all the speeches?
 - Which presidents use the widest variety of words?
@@ -68,7 +68,7 @@ This data cleaning worked out really well. I ended up with two main dataframes i
 
 # Results
 
-For my results, I created a LOT of charts. I answered a LOT of questions. I definitely answered all the questions I set out to answer and more. All in all, I created about 611 charts throughout my scripting. Let's say that again. 611 CHARTS. 
+For my results, I created a LOT of charts. I answered a LOT of questions. I definitely answered all the questions I set out to answer and more. All in all, I created about 611 charts throughout my scripting. Let's say that again. 612 CHARTS. Go click through the 'output' directory of my repo and see for yourself! Pick your favorite president :)
 
 For my analysis, I analyzed the most frequent 1-word, 2-word, and 3-word phrases uttered by each president, as well as during each individual year. This alone resulted in 580 of the 611 charts, about 95%. This gave insight into what each individual president was addressing in their speech at the time, as well as the overall subjects addressed during each president's cumulative speeches. 
 
@@ -178,7 +178,7 @@ Similar answer to the vocabulary / variety of word measure, shown above.
 
 # Future Work
 
-This project was a huge learning experience for me and really it gave me a lot of ideas for the next capstone course I be attending! I realized some pitfalls pretty quickly near the end of the project that I want to improve upon in the next capstone. I started to even think the dataset I was using wasn't great for text analytics within a political lens. What I mean is, the State of the Union address is often a formal and well-regulated speech. The differences in speech between different presidents are probably not as noticeable in the State of the Union due to its traditional and formal nature. In the future, I would love to source a different, more informal source of presidential speech. In addition to that, the other pitfalls I noticed can be found below. 
+This project was a huge learning experience for me and really it gave me a lot of ideas for the next capstone course! I realized some pitfalls pretty quickly near the end of the project that I want to improve upon in the next capstone. I started to even think the dataset I was using wasn't great for text analytics within a political lens. What I mean is, the State of the Union address is often a formal and well-regulated speech. The differences in speech between different presidents are probably not as noticeable in the State of the Union due to its traditional and formal nature. In the future, I would love to source a different, more informal source of presidential speech. In addition to that, the other pitfalls I noticed can be found below. 
 
 I realized that my current project:
 
@@ -202,12 +202,14 @@ Jeremy Beard
 
 # References
 
+Please see my PowerPoint Presentation for proper APA citations of all my resources.
+
 The dataset I used was located at: 
 https://www.kaggle.com/datasets/rtatman/state-of-the-union-corpus-1989-2017
 
 I also utilized all of my old text-based homework assignments for text cleaning and sentiment analysis actions.
 
-Aside from that, I utilized www.phind.com for unimportant technical questions where I couldn't remember specific syntax of certain operations. 
+Aside from that, I utilized www.phind.com for unimportant technical questions where I couldn't remember specific syntax of certain operations. I also heavily referenced the matplotlib documentation for assistance with visualization items. 
 
 
 

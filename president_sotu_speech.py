@@ -21,8 +21,6 @@ start_time = timeit.default_timer()
 # First step to any project: hello world :)
 print("Hello World!")
 
-
-
 # Next step, import the libraries we'll need
 import os
 import subprocess
